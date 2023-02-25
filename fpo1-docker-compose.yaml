@@ -1,0 +1,113 @@
+version: '2'
+
+volumes:
+    orderer.fpo1.vdoservices.in:
+    peer0.fpo1.vdoservices.in:
+    peer1.fpo1.vdoservices.in:
+
+
+networks:
+    producer-channel:
+
+
+services:
+    # orderer
+    orderer.fpo1.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: orderer-base
+        container_name: orderer.fpo1.vdoservices.in
+        networks:
+            - producer-channel
+        volumes:
+            - ./crypto-config/ordererOrganizations/vdoservices.in/orderers/orderer.fpo1.vdoservices.in/msp:/var/hyperledger/orderer/msp
+            - ./crypto-config/ordererOrganizations/vdoservices.in/orderers/orderer.fpo1.vdoservices.in/tls/:/var/hyperledger/orderer/tls
+            - ./crypto-config/ordererOrganizations/vdoservices.in/users/Admin@vdoservices.in/:/var/hyperledger/orderer/admin
+            - orderer.fpo1.vdoservices.in:/var/hyperledger/production/orderer
+        ports:
+            - 7051:7050
+            - 7081:7080
+
+    # couch db for peer0
+    couch.peer0.fpo1.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: couchdb-base
+        container_name: couch.peer0.fpo1.vdoservices.in
+        networks:
+            - producer-channel
+        ports:
+            - 9984:5984
+    
+    # peer 0
+    peer0.fpo1.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: peer-base
+        container_name: peer0.fpo1.vdoservices.in
+        dns_search: .
+        networks:
+            - producer-channel
+        environment:
+            - CORE_PEER_ID=peer0.fpo1.vdoservices.in
+            - CORE_PEER_ADDRESS=peer0.fpo1.vdoservices.in:9051
+            - CORE_PEER_LISTENADDRESS=peer0.fpo1.vdoservices.in:9051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.fpo1.vdoservices.in:9051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.fpo1.vdoservices.in:9051
+            - CORE_PEER_LOCALMSPID=fpo1
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couch.peer0.fpo1.vdoservices.in:5984
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=root
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=oracle
+        volumes:
+            - /var/run/:/host/var/run/
+            - ./crypto-config/peerOrganizations/fpo1.vdoservices.in/users/Admin@fpo1.vdoservices.in/msp:/etc/hyperledger/fabric/msp
+            - ./crypto-config/peerOrganizations/fpo1.vdoservices.in/peers/peer0.fpo1.vdoservices.in/tls:/etc/hyperledger/fabric/tls
+            - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer
+            - peer0.fpo1.vdoservices.in:/var/hyperledger/production
+        ports:
+            - 9051:7051
+        depends_on:
+            - couch.peer0.fpo1.vdoservices.in
+    
+    # couch db for peer1
+    couch.peer1.fpo1.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: couchdb-base
+        container_name: couch.peer1.fpo1.vdoservices.in
+        networks:
+            - producer-channel
+        ports:
+            - 9985:5984
+
+    # peer 1
+    peer1.fpo1.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: peer-base
+        container_name: peer1.fpo1.vdoservices.in
+        dns_search: .
+        networks:
+            - producer-channel
+        environment:
+            - CORE_PEER_ID=peer1.fpo1.vdoservices.in
+            - CORE_PEER_ADDRESS=peer1.fpo1.vdoservices.in:9052
+            - CORE_PEER_LISTENADDRESS=peer1.fpo1.vdoservices.in:9052
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.fpo1.vdoservices.in:9052
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.fpo1.vdoservices.in:9052
+            - CORE_PEER_LOCALMSPID=fpo1
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couch.peer1.fpo1.vdoservices.in:5984
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=root
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=oracle
+        volumes:
+            - /var/run/:/host/var/run/
+            - ./crypto-config/peerOrganizations/fpo1.vdoservices.in/users/Admin@fpo1.vdoservices.in/msp:/etc/hyperledger/fabric/msp
+            - ./crypto-config/peerOrganizations/fpo1.vdoservices.in/peers/peer1.fpo1.vdoservices.in/tls:/etc/hyperledger/fabric/tls
+            - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer
+            - peer1.fpo1.vdoservices.in:/var/hyperledger/production
+        ports:
+            - 9052:7051
+        depends_on:
+            - couch.peer1.fpo1.vdoservices.in

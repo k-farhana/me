@@ -1,0 +1,112 @@
+version: '2'
+
+volumes:
+    orderer.iinrg.vdoservices.in:
+    peer0.iinrg.vdoservices.in:
+    peer1.iinrg.vdoservices.in:
+
+
+networks:
+    producer-channel:
+
+
+services:
+    # orderer
+    orderer.iinrg.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: orderer-base
+        container_name: orderer.iinrg.vdoservices.in
+        networks:
+            - producer-channel
+        volumes:
+            - ./crypto-config/ordererOrganizations/vdoservices.in/orderers/orderer.iinrg.vdoservices.in/msp:/var/hyperledger/orderer/msp
+            - ./crypto-config/ordererOrganizations/vdoservices.in/orderers/orderer.iinrg.vdoservices.in/tls/:/var/hyperledger/orderer/tls
+            - ./crypto-config/ordererOrganizations/vdoservices.in/users/Admin@vdoservices.in/:/var/hyperledger/orderer/admin
+            - orderer.iinrg.vdoservices.in:/var/hyperledger/production/orderer
+        ports:
+            - 7050:7050
+            - 7080:7080
+
+    # couch db for peer0
+    couch.peer0.iinrg.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: couchdb-base
+        container_name: couch.peer0.iinrg.vdoservices.in
+        networks:
+            - producer-channel
+        ports:
+            - 8984:5984
+    
+    # peer 0
+    peer0.iinrg.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: peer-base
+        container_name: peer0.iinrg.vdoservices.in
+        dns_search: .
+        networks:
+            - producer-channel
+        environment:
+            - CORE_PEER_ID=peer0.iinrg.vdoservices.in
+            - CORE_PEER_ADDRESS=peer0.iinrg.vdoservices.in:8051
+            - CORE_PEER_LISTENADDRESS=peer0.iinrg.vdoservices.in:8051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.iinrg.vdoservices.in:8051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.iinrg.vdoservices.in:8051
+            - CORE_PEER_LOCALMSPID=iinrg
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couch.peer0.iinrg.vdoservices.in:5984
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=root
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=oracle
+        volumes:
+            - /var/run/:/host/var/run/
+            - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/users/Admin@iinrg.vdoservices.in/msp:/etc/hyperledger/fabric/msp
+            - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/peers/peer0.iinrg.vdoservices.in/tls:/etc/hyperledger/fabric/tls
+            - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer
+            - ./chaincodes-package:/opt/gopath/src/github.com/hyperledger/fabric/chaincodes
+            - peer0.iinrg.vdoservices.in:/var/hyperledger/production
+        ports:
+            - 8051:7051
+        depends_on:
+            - couch.peer0.iinrg.vdoservices.in
+    
+    # couch db for peer1
+    couch.peer1.iinrg.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: couchdb-base
+        container_name: couch.peer1.iinrg.vdoservices.in
+        networks:
+            - producer-channel
+    
+    # peer1
+    peer1.iinrg.vdoservices.in:
+        extends:
+            file: base.yaml
+            service: peer-base
+        container_name: peer1.iinrg.vdoservices.in
+        dns_search: .
+        networks:
+            - producer-channel
+        environment:
+            - CORE_PEER_ID=peer1.iinrg.vdoservices.in
+            - CORE_PEER_ADDRESS=peer1.iinrg.vdoservices.in:8052
+            - CORE_PEER_LISTENADDRESS=peer1.iinrg.vdoservices.in:8052
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.iinrg.vdoservices.in:8052
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer1.iinrg.vdoservices.in:8052
+            - CORE_PEER_LOCALMSPID=iinrg
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couch.peer1.iinrg.vdoservices.in:5984
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_USERNAME=root
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_PASSWORD=oracle
+        volumes:
+            - /var/run/:/host/var/run/
+            - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/users/Admin@iinrg.vdoservices.in/msp:/etc/hyperledger/fabric/msp
+            - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/peers/peer1.iinrg.vdoservices.in/tls:/etc/hyperledger/fabric/tls
+            - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer
+            - peer1.iinrg.vdoservices.in:/var/hyperledger/production
+        ports:
+            - 8052:7051
+        depends_on:
+            - couch.peer1.iinrg.vdoservices.in

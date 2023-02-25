@@ -1,0 +1,8 @@
+PeerOrgs:
+  - Name: fpo3
+    Domain: fpo3.vdoservices.in
+    EnableNodeOUs: true
+    Specs:
+      - Hostname: fpo3
+    Users:
+      Count: 1
