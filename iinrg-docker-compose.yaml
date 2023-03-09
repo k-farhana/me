@@ -52,7 +52,7 @@ services:
             - CORE_PEER_ID=peer0.iinrg.vdoservices.in
             - CORE_PEER_ADDRESS=peer0.iinrg.vdoservices.in:8051
             - CORE_PEER_LISTENADDRESS=peer0.iinrg.vdoservices.in:8051
-            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.iinrg.vdoservices.in:8051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.iinrg.vdoservices.in:8052
             - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.iinrg.vdoservices.in:8051
             - CORE_PEER_LOCALMSPID=iinrg
             - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
@@ -63,8 +63,10 @@ services:
             - /var/run/:/host/var/run/
             - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/users/Admin@iinrg.vdoservices.in/msp:/etc/hyperledger/fabric/msp
             - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/peers/peer0.iinrg.vdoservices.in/tls:/etc/hyperledger/fabric/tls
+            - ./crypto-config/ordererOrganizations/vdoservices.in/orderers/orderer.iinrg.vdoservices.in/tls:/etc/hyperledger/fabric/orderer/tls
+            - ./crypto-config/ordererOrganizations/vdoservices.in/orderers/orderer.iinrg.vdoservices.in/msp:/etc/hyperledger/fabric/orderer/msp
             - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer
-            - ./chaincodes-package:/opt/gopath/src/github.com/hyperledger/fabric/chaincodes
+            - ./chaincodes-package:/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincodes
             - peer0.iinrg.vdoservices.in:/var/hyperledger/production
         ports:
             - 8051:7051
@@ -105,6 +107,7 @@ services:
             - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/users/Admin@iinrg.vdoservices.in/msp:/etc/hyperledger/fabric/msp
             - ./crypto-config/peerOrganizations/iinrg.vdoservices.in/peers/peer1.iinrg.vdoservices.in/tls:/etc/hyperledger/fabric/tls
             - ./channel-artifacts:/opt/gopath/src/github.com/hyperledger/fabric/peer
+            - ./chaincodes-package:/opt/gopath/src/github.com/hyperledger/fabric/peer/chaincodes
             - peer1.iinrg.vdoservices.in:/var/hyperledger/production
         ports:
             - 8052:7051
