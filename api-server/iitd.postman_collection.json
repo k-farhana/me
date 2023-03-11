@@ -1,0 +1,1307 @@
+{
+	"info": {
+		"_postman_id": "ea80ead9-2dae-4c6c-a03b-9685051905f4",
+		"name": "iitd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "offchain data",
+			"item": [
+				{
+					"name": "get uploaded image",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/img/productImg-1678542861257-411179465.jpg",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"img",
+								"productImg-1678542861257-411179465.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get crop advisory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/nisa/crop-advisory",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"crop-advisory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get crop advisory",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/nisa/crop-advisory",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"crop-advisory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "384"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"180-ZzdDeJ+uXDmfPQBEjzeyuTHzPsQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 18:16:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"640b711098bc938b6ce31124\",\n            \"title\": \"Crop advisory title 2\",\n            \"content\": \"Crop advisory content 2\",\n            \"createdAt\": \"2023-03-10T18:04:00.162Z\",\n            \"updatedAt\": \"2023-03-10T18:04:00.162Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"640b70aade3718a64c8957b4\",\n            \"title\": \"Crop advisory title\",\n            \"content\": \"Crop advisory content\",\n            \"createdAt\": \"2023-03-10T18:02:18.141Z\",\n            \"updatedAt\": \"2023-03-10T18:02:18.141Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create new crop advisory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"cropAdvisoryId\": \"CA005\",\n    \"title\": \"Crop advisory title 5\",\n    \"content\": \"Crop advisory content 5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/nisa/crop-advisory",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"crop-advisory"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create new crop advisory",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"cropAdvisoryId\": \"CA005\",\n    \"title\": \"Crop advisory title 5\",\n    \"content\": \"Crop advisory content 5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/crop-advisory",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"crop-advisory"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c5-XMYDTr5sW4BM4zZSYao86wWD5sc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 18:21:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"title\": \"Crop advisory title 5\",\n        \"content\": \"Crop advisory content 5\",\n        \"_id\": \"640b753b658fc4f74dae5467\",\n        \"createdAt\": \"2023-03-10T18:21:47.741Z\",\n        \"updatedAt\": \"2023-03-10T18:21:47.741Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update crop advisory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Crop advisory title 3\",\n    \"content\": \"Crop advisory content 3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/nisa/crop-advisory/640b74a4d70ffb8c48ce2204",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"crop-advisory",
+								"640b74a4d70ffb8c48ce2204"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update crop advisory",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Crop advisory title 3\",\n    \"content\": \"Crop advisory content 3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/crop-advisory/640b74a4d70ffb8c48ce2204",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"crop-advisory",
+										"640b74a4d70ffb8c48ce2204"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-rMR1PYT/eS5xcOwh/5eCwYtCTUc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 Mar 2023 18:20:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "create traning program",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"traningId\": \"TRAN001\",\n    \"courseName\": \"Course 1\",\n    \"courseStartDate\": \"2023-03-11\", \n    \"duration\": \"4 days\",\n    \"applicationStartDate\": \"2023-03-11\",\n    \"applicationEndDate\": \"2023-03-12\",\n    \"fee\": \"1700\",\n    \"remarks\": \"Some remarks\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/nisa/traning",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"traning"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create traning program",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"traningId\": \"TRAN001\",\n    \"courseName\": \"Course 1\",\n    \"courseStartDate\": \"2023-03-11\", \n    \"duration\": \"4 days\",\n    \"applicationStartDate\": \"2023-03-11\",\n    \"applicationEndDate\": \"2023-03-12\",\n    \"fee\": \"1700\",\n    \"remarks\": \"Some remarks\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/traning",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"traning"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "334"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14e-xlL+2Ruezsd5oQYRcqsmcXyVwAw\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 05:53:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"traningId\": \"TRAN001\",\n        \"courseName\": \"Course 1\",\n        \"courseStartDate\": \"2023-03-11\",\n        \"duration\": \"4 days\",\n        \"applicationStartDate\": \"2023-03-11\",\n        \"applicationEndDate\": \"2023-03-12\",\n        \"fee\": \"1700\",\n        \"remarks\": \"Some remarks\",\n        \"_id\": \"640c175f248d814d6b7f6968\",\n        \"createdAt\": \"2023-03-11T05:53:35.827Z\",\n        \"updatedAt\": \"2023-03-11T05:53:35.827Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update traning program",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"traningId\": \"TRAN001\",\n    \"courseName\": \"Course 1\",\n    \"courseStartDate\": \"2023-03-11\", \n    \"duration\": \"4 days\",\n    \"applicationStartDate\": \"2023-03-11\",\n    \"applicationEndDate\": \"2023-03-12\",\n    \"fee\": \"1700\",\n    \"remarks\": \"Good remarks\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/nisa/traning/640c175f248d814d6b7f6968",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"traning",
+								"640c175f248d814d6b7f6968"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update traning program",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"traningId\": \"TRAN001\",\n    \"courseName\": \"Course 1\",\n    \"courseStartDate\": \"2023-03-11\", \n    \"duration\": \"4 days\",\n    \"applicationStartDate\": \"2023-03-11\",\n    \"applicationEndDate\": \"2023-03-12\",\n    \"fee\": \"1700\",\n    \"remarks\": \"Good remarks\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/traning/640c175f248d814d6b7f6968",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"traning",
+										"640c175f248d814d6b7f6968"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-rMR1PYT/eS5xcOwh/5eCwYtCTUc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 05:55:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get traning",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/nisa/traning",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"traning"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get traning",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/nisa/traning",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"traning"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "336"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"150-5PusbpbV4JE6nOuBfZwXvtV66mQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 05:53:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"640c175f248d814d6b7f6968\",\n            \"traningId\": \"TRAN001\",\n            \"courseName\": \"Course 1\",\n            \"courseStartDate\": \"2023-03-11\",\n            \"duration\": \"4 days\",\n            \"applicationStartDate\": \"2023-03-11\",\n            \"applicationEndDate\": \"2023-03-12\",\n            \"fee\": \"1700\",\n            \"remarks\": \"Some remarks\",\n            \"createdAt\": \"2023-03-11T05:53:35.827Z\",\n            \"updatedAt\": \"2023-03-11T05:53:35.827Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create fpo sell item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productImg",
+									"type": "file",
+									"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+								},
+								{
+									"key": "productId",
+									"value": "PROD001",
+									"type": "default"
+								},
+								{
+									"key": "productName",
+									"value": "Nylon bag",
+									"type": "default"
+								},
+								{
+									"key": "marketPrice",
+									"value": "200",
+									"type": "default"
+								},
+								{
+									"key": "fpoPrice",
+									"value": "150",
+									"type": "default"
+								},
+								{
+									"key": "isAvailable",
+									"value": "true",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/fpo/product",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create fpo sell item",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productImg",
+											"type": "file",
+											"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+										},
+										{
+											"key": "productId",
+											"value": "PROD001",
+											"type": "default"
+										},
+										{
+											"key": "productName",
+											"value": "Nylon bag",
+											"type": "default"
+										},
+										{
+											"key": "marketPrice",
+											"value": "200",
+											"type": "default"
+										},
+										{
+											"key": "fpoPrice",
+											"value": "150",
+											"type": "default"
+										},
+										{
+											"key": "isAvailable",
+											"value": "true",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/fpo/product",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"fpo",
+										"product"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13c-KClL/Ob64RT/MGnUfIADx2A9Bb8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 12:47:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"productId\": \"PROD001\",\n        \"productName\": \"Nylon bag\",\n        \"marketPrice\": 200,\n        \"fpoPrice\": 150,\n        \"imageUrl\": \"productImg-1678538852223-19318287.jpg\",\n        \"isAvailable\": \"true\",\n        \"fpoId\": \"FPO01\",\n        \"isDeleted\": false,\n        \"_id\": \"640c786402b88ea1cda3eda5\",\n        \"createdAt\": \"2023-03-11T12:47:32.240Z\",\n        \"updatedAt\": \"2023-03-11T12:47:32.240Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update fpo sell item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productImg",
+									"type": "file",
+									"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+								},
+								{
+									"key": "productId",
+									"value": "PROD001",
+									"type": "default"
+								},
+								{
+									"key": "productName",
+									"value": "Nylon bag",
+									"type": "default"
+								},
+								{
+									"key": "marketPrice",
+									"value": "200",
+									"type": "default"
+								},
+								{
+									"key": "fpoPrice",
+									"value": "180",
+									"type": "default"
+								},
+								{
+									"key": "isAvailable",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "isDeleted",
+									"value": "false",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/fpo/product/640c786402b88ea1cda3eda5",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"product",
+								"640c786402b88ea1cda3eda5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update fpo sell item",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productImg",
+											"type": "file",
+											"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+										},
+										{
+											"key": "productId",
+											"value": "PROD001",
+											"type": "default"
+										},
+										{
+											"key": "productName",
+											"value": "Nylon bag",
+											"type": "default"
+										},
+										{
+											"key": "marketPrice",
+											"value": "200",
+											"type": "default"
+										},
+										{
+											"key": "fpoPrice",
+											"value": "180",
+											"type": "default"
+										},
+										{
+											"key": "isAvailable",
+											"value": "true",
+											"type": "default"
+										},
+										{
+											"key": "isDeleted",
+											"value": "false",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/fpo/product/640c786402b88ea1cda3eda5",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"fpo",
+										"product",
+										"640c786402b88ea1cda3eda5"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-rMR1PYT/eS5xcOwh/5eCwYtCTUc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 12:51:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get fpo sell items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/fpo/product",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get fpo sell items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/fpo/product",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"fpo",
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "318"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13e-2SeQA/QI8w9KCvsAav5GwIcgCh0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 12:48:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"640c786402b88ea1cda3eda5\",\n            \"productId\": \"PROD001\",\n            \"productName\": \"Nylon bag\",\n            \"marketPrice\": 200,\n            \"fpoPrice\": 150,\n            \"imageUrl\": \"productImg-1678538852223-19318287.jpg\",\n            \"isAvailable\": \"true\",\n            \"fpoId\": \"FPO01\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2023-03-11T12:47:32.240Z\",\n            \"updatedAt\": \"2023-03-11T12:47:32.240Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create fpo lac sell item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productImg",
+									"type": "file",
+									"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+								},
+								{
+									"key": "productId",
+									"value": "PROD001",
+									"type": "default"
+								},
+								{
+									"key": "productName",
+									"value": "Stick lac",
+									"type": "default"
+								},
+								{
+									"key": "marketPrice",
+									"value": "150",
+									"type": "default"
+								},
+								{
+									"key": "fpoPrice",
+									"value": "200",
+									"type": "default"
+								},
+								{
+									"key": "isProcurable",
+									"value": "true",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/fpo/lac",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"lac"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create fpo lac sell item",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productImg",
+											"type": "file",
+											"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+										},
+										{
+											"key": "productId",
+											"value": "PROD001",
+											"type": "default"
+										},
+										{
+											"key": "productName",
+											"value": "Stick lac",
+											"type": "default"
+										},
+										{
+											"key": "marketPrice",
+											"value": "150",
+											"type": "default"
+										},
+										{
+											"key": "fpoPrice",
+											"value": "200",
+											"type": "default"
+										},
+										{
+											"key": "isProcurable",
+											"value": "true",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/fpo/lac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"fpo",
+										"lac"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13c-ypwCDaDa9Ic31P1TtflWSY9OaD4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 13:50:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"productId\": \"PROD001\",\n        \"productName\": \"Stick lac\",\n        \"marketPrice\": 150,\n        \"fpoPrice\": 200,\n        \"imageUrl\": \"productImg-1678542610566-326464393.jpg\",\n        \"isProcurable\": true,\n        \"fpoId\": \"FPO01\",\n        \"isDeleted\": false,\n        \"_id\": \"640c8712438f7d5dc0634c50\",\n        \"createdAt\": \"2023-03-11T13:50:10.580Z\",\n        \"updatedAt\": \"2023-03-11T13:50:10.580Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update fpo lac sell item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "productImg",
+									"type": "file",
+									"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+								},
+								{
+									"key": "productId",
+									"value": "PROD001",
+									"type": "default"
+								},
+								{
+									"key": "productName",
+									"value": "Stick lac",
+									"type": "default"
+								},
+								{
+									"key": "marketPrice",
+									"value": "180",
+									"type": "default"
+								},
+								{
+									"key": "fpoPrice",
+									"value": "200",
+									"type": "default"
+								},
+								{
+									"key": "isProcurable",
+									"value": "true",
+									"type": "default"
+								},
+								{
+									"key": "isDeleted",
+									"value": "false",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/fpo/lac/640c8712438f7d5dc0634c50",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"lac",
+								"640c8712438f7d5dc0634c50"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update fpo lac sell item",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "productImg",
+											"type": "file",
+											"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+										},
+										{
+											"key": "productId",
+											"value": "PROD001",
+											"type": "default"
+										},
+										{
+											"key": "productName",
+											"value": "Stick lac",
+											"type": "default"
+										},
+										{
+											"key": "marketPrice",
+											"value": "180",
+											"type": "default"
+										},
+										{
+											"key": "fpoPrice",
+											"value": "200",
+											"type": "default"
+										},
+										{
+											"key": "isProcurable",
+											"value": "true",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/fpo/lac/640c8712438f7d5dc0634c50",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"fpo",
+										"lac",
+										"640c8712438f7d5dc0634c50"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "101"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"65-rMR1PYT/eS5xcOwh/5eCwYtCTUc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 13:54:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"acknowledged\": true,\n        \"modifiedCount\": 1,\n        \"upsertedId\": null,\n        \"upsertedCount\": 0,\n        \"matchedCount\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "get fpo lac sell item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/fpo/lac",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"lac"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get fpo lac sell item",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/fpo/lac",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"fpo",
+										"lac"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "318"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13e-drywOoXHlVPp6FjBSNtVx2cPUHs\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 11 Mar 2023 13:54:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"640c8712438f7d5dc0634c50\",\n            \"productId\": \"PROD001\",\n            \"productName\": \"Stick lac\",\n            \"marketPrice\": 180,\n            \"fpoPrice\": 200,\n            \"imageUrl\": \"productImg-1678542861257-411179465.jpg\",\n            \"isProcurable\": true,\n            \"fpoId\": \"FPO01\",\n            \"isDeleted\": false,\n            \"createdAt\": \"2023-03-11T13:50:10.580Z\",\n            \"updatedAt\": \"2023-03-11T13:54:21.265Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
