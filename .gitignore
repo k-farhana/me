@@ -5,3 +5,5 @@ api-server/node_modules
 uploads
 
 package-lock.json
+
+./logs.txt

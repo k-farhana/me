@@ -27,7 +27,8 @@ class ResourceNotFoundError extends Error{
 
 // syntax is correct but cannot process the request
 class CustomError extends Error{
-    constructor({ code = 422, message }){
+    constructor({ code = 422, message, m }){
+        message = message || m
         super(message)
         this.name = "CustomError"
         this.code = code

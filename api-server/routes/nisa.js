@@ -2,6 +2,8 @@ const router = require('express').Router()
 
 const CropAdvisoryModel = require('../models/crop-advisory-model')
 const TraningModel = require('../models/traning-model')
+const LacTestModel = require('../models/lac-test-model')
+
 const { HandleResponseError } = require('../utils/handleResponseError')
 
 router.get('/crop-advisory', async (req, res) => {
@@ -50,10 +52,10 @@ router.get('/traning', async (req, res) => {
 
 router.post('/traning', async (req, res) => {
     try {
-        let { traningId,courseName, courseStartDate, duration, applicationStartDate, applicationEndDate, fee, remarks } = req.body
+        let { traningId, courseName, courseStartDate, duration, applicationStartDate, applicationEndDate, fee, remarks } = req.body
 
-        let data = await TraningModel.create({ traningId,courseName, courseStartDate, duration, applicationStartDate, applicationEndDate, fee, remarks })
-        
+        let data = await TraningModel.create({ traningId, courseName, courseStartDate, duration, applicationStartDate, applicationEndDate, fee, remarks })
+
         res.status(201).json({ data })
     } catch (err) {
         HandleResponseError(err, res)
@@ -66,7 +68,29 @@ router.put('/traning/:id', async (req, res) => {
         let { traningId, courseName, courseStartDate, duration, applicationStartDate, applicationEndDate, fee, remarks } = req.body
 
         let data = await TraningModel.updateOne({ _id: id }, { traningId, courseName, courseStartDate, duration, applicationStartDate, applicationEndDate, fee, remarks })
-        
+
+        res.status(200).json({ data })
+    } catch (err) {
+        HandleResponseError(err, res)
+    }
+})
+
+router.post('/lac-test', async (req, res) => {
+    try {
+        let { testId, category, testName, minRequiredQuantity, testFee, reportingPeriod } = req.body
+
+        let data = await LacTestModel.create({ testId, category, testName, minRequiredQuantity, testFee, reportingPeriod })
+
+        res.status(201).json({ data })
+    } catch (err) {
+        HandleResponseError(err, res)
+    }
+})
+
+router.get('/lac-test', async (req, res) => {
+    try {
+        let data = await LacTestModel.find({})
+
         res.status(200).json({ data })
     } catch (err) {
         HandleResponseError(err, res)

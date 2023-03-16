@@ -1304,6 +1304,179 @@
 					]
 				},
 				{
+					"name": "lac test",
+					"item": [
+						{
+							"name": "create lac test",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"testId\": \"Test 01\",\n    \"category\": \"Shellac / Seedlac\",\n    \"testName\": \"Hot Alcohol Insoluble\",\n    \"minRequiredQuantity\": 100,\n    \"testFee\": 1000,\n    \"reportingPeriod\": 5\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/lac-test",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lac-test"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "create lac test",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"testId\": \"Test 01\",\n    \"category\": \"Shellac / Seedlac\",\n    \"testName\": \"Hot Alcohol Insoluble\",\n    \"minRequiredQuantity\": 100,\n    \"testFee\": 1000,\n    \"reportingPeriod\": 5\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/nisa/lac-test",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"nisa",
+												"lac-test"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "275"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"113-3TekpNBiBQIjObgegnYUOKdNsJs\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 14 Mar 2023 21:05:43 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"testId\": \"Test 01\",\n        \"category\": \"Shellac / Seedlac\",\n        \"testName\": \"Hot Alcohol Insoluble\",\n        \"minRequiredQuantity\": 100,\n        \"testFee\": 1000,\n        \"reportingPeriod\": 5,\n        \"_id\": \"6410e1a79a03b63b67e163a5\",\n        \"createdAt\": \"2023-03-14T21:05:43.105Z\",\n        \"updatedAt\": \"2023-03-14T21:05:43.105Z\",\n        \"__v\": 0\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "get lac test",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/nisa/lac-test",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lac-test"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get lac test",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/nisa/lac-test",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"nisa",
+												"lac-test"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "277"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"115-xUUZYH1xg4rX3r0obQql7JidZO0\""
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 14 Mar 2023 21:06:11 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"_id\": \"6410e1a79a03b63b67e163a5\",\n            \"testId\": \"Test 01\",\n            \"category\": \"Shellac / Seedlac\",\n            \"testName\": \"Hot Alcohol Insoluble\",\n            \"minRequiredQuantity\": 100,\n            \"testFee\": 1000,\n            \"reportingPeriod\": 5,\n            \"createdAt\": \"2023-03-14T21:05:43.105Z\",\n            \"updatedAt\": \"2023-03-14T21:05:43.105Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "get uploaded image",
 					"request": {
 						"method": "GET",
@@ -1320,8 +1493,161 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "upload doc",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "doc",
+									"type": "file",
+									"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}/document",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"document"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "upload doc",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "doc",
+											"type": "file",
+											"src": "/home/vijay/Downloads/pexels-suliman-sallehi-1704488.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{host}}/document",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"document"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-2ymGfv04c9hQmmySxVWL7fdi4NQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 14 Mar 2023 21:21:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"docId\": \"doc-1678828880007-578095983.jpg\"\n    }\n}"
+						}
+					]
 				}
 			]
+		},
+		{
+			"name": "get fabcar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/fabcar",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"fabcar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"user2\",\n    \"mspId\": \"Org1MSP\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/user",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create fab car",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/fabcar",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"fabcar"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
