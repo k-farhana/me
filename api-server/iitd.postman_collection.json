@@ -1477,6 +1477,551 @@
 					]
 				},
 				{
+					"name": "signup",
+					"item": [
+						{
+							"name": "fpo signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Some FPO name\",\n    \"userName\": \"fpo\",\n    \"password\": \"fpo\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/signup/fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"signup",
+										"fpo"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "fpo signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Some FPO name\",\n    \"userName\": \"fpo2\",\n    \"password\": \"helloworld\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/signup/fpo",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"signup",
+												"fpo"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "31"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f-5rje0cfha+xV3V6Ob9DoIvR38GQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Mar 2023 09:08:09 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"successfully created\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get fpo list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/signup/fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"signup",
+										"fpo"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "get fpo list",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{host}}/signup/fpo",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"signup",
+												"fpo"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "86"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"56-cFFwsjoOKh733rqalm2O7Nh3xY0\""
+										},
+										{
+											"key": "Date",
+											"value": "Sat, 18 Mar 2023 18:09:15 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"_id\": \"6415fb378f420968c47b52aa\",\n            \"name\": \"Some FPO name\",\n            \"userName\": \"fpo1\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "nisa signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Some NISA name\",\n    \"userName\": \"nisa\",\n    \"password\": \"nisa\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/signup/nisa",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"signup",
+										"nisa"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "nisa signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Some NISA name\",\n    \"userName\": \"nisa\",\n    \"password\": \"nisa\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/signup/nisa",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"signup",
+												"nisa"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "31"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f-5rje0cfha+xV3V6Ob9DoIvR38GQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Mar 2023 09:03:06 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"successfully created\"\n}"
+								}
+							]
+						},
+						{
+							"name": "corporateclient signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Some corporateclient name\",\n    \"userName\": \"corporateclient\",\n    \"password\": \"corporateclient\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/signup/corporateclient",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"signup",
+										"corporateclient"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "corporateclient signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Some corporateclient name\",\n    \"userName\": \"corporateclient\",\n    \"password\": \"corporateclient\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/signup/corporateclient",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"signup",
+												"corporateclient"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "31"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f-5rje0cfha+xV3V6Ob9DoIvR38GQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Mar 2023 09:04:30 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"successfully created\"\n}"
+								}
+							]
+						},
+						{
+							"name": "samunnati signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Some lending partner name\",\n    \"userName\": \"samunnati\",\n    \"password\": \"samunnati\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/signup/samunnati",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"signup",
+										"samunnati"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "samunnati signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Some lending partner name\",\n    \"userName\": \"samunnati\",\n    \"password\": \"samunnati\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/signup/samunnati",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"signup",
+												"samunnati"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "31"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f-5rje0cfha+xV3V6Ob9DoIvR38GQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Mar 2023 09:06:16 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"successfully created\"\n}"
+								}
+							]
+						},
+						{
+							"name": "farmer signup",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fpoId\": \"6416e6f3eaba7e02bfeb9297\",\n    \"name\": \"Some farmer name\",\n    \"userName\": \"farmer\",\n    \"password\": \"farmer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/signup/farmer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"signup",
+										"farmer"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "farmer signup",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Some farmer name\",\n    \"userName\": \"farmer\",\n    \"password\": \"farmer\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}/signup/farmer",
+											"host": [
+												"{{host}}"
+											],
+											"path": [
+												"signup",
+												"farmer"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "31"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"1f-5rje0cfha+xV3V6Ob9DoIvR38GQ\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 19 Mar 2023 09:07:45 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"successfully created\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
 					"name": "get uploaded image",
 					"request": {
 						"method": "GET",
@@ -1590,30 +2135,2665 @@
 			]
 		},
 		{
-			"name": "get fabcar",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/fabcar",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"fabcar"
+			"name": "corporate auction",
+			"item": [
+				{
+					"name": "create auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bidId\": \"BID01\",\n    \"lacStrainType\": \"Kusmi\",\n    \"sourceTree\": \"Kusum\",\n    \"origin\": \"MP\",\n    \"seedLacContent\": \"some content\",\n    \"freshResinContent\": \"some content\",\n    \"quantity\": \"500\",\n    \"supplyDate\": \"2023-03-23\",\n    \"bidEndDate\": \"2023-03-20\",\n    \"reportsRequired\": [\"Chowri\"],\n    \"remarks\": \"some remarks\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create auction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"bidId\": \"BID01\",\n    \"lacStrainType\": \"Kusmi\",\n    \"sourceTree\": \"Kusum\",\n    \"origin\": \"MP\",\n    \"seedLacContent\": \"some content\",\n    \"freshResinContent\": \"some content\",\n    \"quantity\": \"500\",\n    \"supplyDate\": \"2023-03-23\",\n    \"bidEndDate\": \"2023-03-20\",\n    \"reportsRequired\": [\"Chowri\"],\n    \"remarks\": \"some remarks\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auction",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auction"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-0AG7e0IiUlKAuGQdyJC2Z24Fwmg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 10:56:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"47fa7398cd0bb85ed0570ce0ef5d4b6639a681f0b0c054dc6ca2fb9a64d1c3db\"\n}"
+						}
+					]
+				},
+				{
+					"name": "make payment to fpo for the bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dateOfPayemnt\": \"2023-03-20\",\n    \"invoice\": \"doc-1678828880007-578095983.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid/f5561c7a-76a2-41a3-9bc0-e3367a25420e/payment",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+								"bid",
+								"f5561c7a-76a2-41a3-9bc0-e3367a25420e",
+								"payment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "make payment to fpo for the bid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dateOfPayemnt\": \"2023-03-20\",\n    \"invoice\": \"doc-1678828880007-578095983.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid/f5561c7a-76a2-41a3-9bc0-e3367a25420e/payment",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auction",
+										"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+										"bid",
+										"f5561c7a-76a2-41a3-9bc0-e3367a25420e",
+										"payment"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "11"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b-KCDMagrU4EZTJ3nb+OLb9Avpag0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:05:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"47fa7398cd0bb85ed0570ce0ef5d4b6639a681f0b0c054dc6ca2fb9a64d1c3db\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get auction list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auction",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get auction list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auction",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auction"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "387"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"183-8QOwQm/HmO2wsaTNKXnSNYGS5z0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:01:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"bidEndDate\": \"2023-03-20\",\n            \"bidId\": \"BID01\",\n            \"bids\": [],\n            \"freshResinContent\": \"some content\",\n            \"id\": \"c1ab8ccf-074f-478e-9e6b-81cc9305de4d\",\n            \"lacStrainType\": \"Kusmi\",\n            \"origin\": \"MP\",\n            \"quantity\": \"500\",\n            \"remarks\": \"some remarks\",\n            \"reportsRequired\": [\n                \"Chowri\"\n            ],\n            \"seedLacContent\": \"some content\",\n            \"sourceTree\": \"Kusum\",\n            \"status\": \"on-going\",\n            \"supplyDate\": \"2023-03-23\",\n            \"userId\": \"6416e711eaba7e02bfeb92a0\"\n        }\n    ]\n}"
+						}
 					]
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "create user",
+			"name": "fpo",
+			"item": [
+				{
+					"name": "get auction list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/auction",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get auction list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auction",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auction"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "387"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"183-8QOwQm/HmO2wsaTNKXnSNYGS5z0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:01:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"bidEndDate\": \"2023-03-20\",\n            \"bidId\": \"BID01\",\n            \"bids\": [],\n            \"freshResinContent\": \"some content\",\n            \"id\": \"c1ab8ccf-074f-478e-9e6b-81cc9305de4d\",\n            \"lacStrainType\": \"Kusmi\",\n            \"origin\": \"MP\",\n            \"quantity\": \"500\",\n            \"remarks\": \"some remarks\",\n            \"reportsRequired\": [\n                \"Chowri\"\n            ],\n            \"seedLacContent\": \"some content\",\n            \"sourceTree\": \"Kusum\",\n            \"status\": \"on-going\",\n            \"supplyDate\": \"2023-03-23\",\n            \"userId\": \"6416e711eaba7e02bfeb92a0\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "get auction list - after placing bid by fpo",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/auction",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auction"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "620"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26c-MMDkZlIaaZtyHPagW2lRcREmAlQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:03:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"bidEndDate\": \"2023-03-20\",\n            \"bidId\": \"BID01\",\n            \"bids\": [\n                {\n                    \"bidAmount\": 2000,\n                    \"fpoName\": \"FPO 01\",\n                    \"fpoPhone\": \"9876543210\",\n                    \"id\": \"f5561c7a-76a2-41a3-9bc0-e3367a25420e\",\n                    \"requiredTestReports\": [\n                        \"doc-1678828880007-578095983.jpg\",\n                        \"doc-1678828880007-578095983.jpg\"\n                    ],\n                    \"userId\": \"6416e711eaba7e02bfeb92a0\"\n                }\n            ],\n            \"freshResinContent\": \"some content\",\n            \"id\": \"c1ab8ccf-074f-478e-9e6b-81cc9305de4d\",\n            \"lacStrainType\": \"Kusmi\",\n            \"origin\": \"MP\",\n            \"quantity\": \"500\",\n            \"remarks\": \"some remarks\",\n            \"reportsRequired\": [\n                \"Chowri\"\n            ],\n            \"seedLacContent\": \"some content\",\n            \"sourceTree\": \"Kusum\",\n            \"status\": \"on-going\",\n            \"supplyDate\": \"2023-03-23\",\n            \"userId\": \"6416e711eaba7e02bfeb92a0\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "place bid for auction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fpoName\": \"FPO 01\",\n    \"fpoPhone\": \"9876543210\",\n    \"bidAmount\": 2000,\n    \"requiredTestReports\": [\"doc-1678828880007-578095983.jpg\", \"doc-1678828880007-578095983.jpg\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+								"bid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "place bid for auction",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fpoName\": \"FPO 01\",\n    \"fpoPhone\": \"9876543210\",\n    \"bidAmount\": 2000,\n    \"requiredTestReports\": [\"doc-1678828880007-578095983.jpg\", \"doc-1678828880007-578095983.jpg\"]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"auction",
+										"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+										"bid"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-4Yf+KD7w08WAMnJvqur6dK2ttE8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:03:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"2ba45cf4e28bd88020477278c890149d325ab28dd63428ef692055970a2f0c48\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create fpo loan window",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"windowType\": \"fpo\",\n    \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n    \"fpoName\": \"FPO NAME\",\n    \"contactNo\": \"9876543210\",\n    \"dateOfApplication\": \"2023-03-18\",\n    \"windowId\": \"WINDOWID01\",\n    \"requestedAmount\": 2500000,\n    \"windowPeriod\": 25,\n    \"kycDocuments\": [{ \"name\":\"moa\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"kycAuthorizedSignatories\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"fpoProfile\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"licenses\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"financialDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"otherDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create fpo loan window",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"windowType\": \"fpo\",\n    \"fpoId\": \"FPOID01\",\n    \"fpoName\": \"FPO NAME\",\n    \"contactNo\": \"9876543210\",\n    \"dateOfApplication\": \"2023-03-18\",\n    \"windowId\": \"WINDOWID01\",\n    \"requestedAmount\": \"25,00,000\",\n    \"windowPeriod\": 25,\n    \"kycDocuments\": [{ \"name\":\"moa\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"kycAuthorizedSignatories\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"fpoProfile\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"licenses\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"financialDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"otherDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-mXkx5Bnni7ZHlRXALrtnL9y3Ars\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:09:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"4210c6973c47a0575434f30e61ecb16c4377d539fe720a32c907bbbafdb62373\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create farmer loan window",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"windowType\": \"farmer\",\n    \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n    \"fpoName\": \"FPO NAME\",\n    \"contactNo\": \"9876543210\",\n    \"dateOfApplication\": \"2023-03-18\",\n    \"windowId\": \"WINDOWID01\",\n    \"requestedAmount\": 2500000,\n    \"windowPeriod\": \"25\",\n    \"kycDocuments\": [{ \"name\":\"moa\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"kycAuthorizedSignatories\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"fpoProfile\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"licenses\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"financialDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"otherDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create farmer loan window",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"windowType\": \"farmer\",\n    \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n    \"fpoName\": \"FPO NAME\",\n    \"contactNo\": \"9876543210\",\n    \"dateOfApplication\": \"2023-03-18\",\n    \"windowId\": \"WINDOWID01\",\n    \"requestedAmount\": 2500000,\n    \"windowPeriod\": \"25\",\n    \"kycDocuments\": [{ \"name\":\"moa\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"kycAuthorizedSignatories\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"fpoProfile\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"licenses\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"financialDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }],\n    \"otherDetails\": [{ \"name\":\"\", \"doc\": \"doc-1678828880007-578095983.jpg\" }]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-eoGZJXMZ1OZC0TRZs/KK/lMBuw8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:38:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"7b586197a7022f67f0f80e36ade13d8c2abd3102fd11a94c6edb28632cb2d3d4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "apply for fpo loan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loanWindowId\": \"LOANWINDOW01\",\n    \"loanId\": \"LOAN01\",\n    \"payeeName\": \"FIRST LAST NAME\",\n    \"accountNumber\": \"BANK account number\",\n    \"ifscNumber\": \"IFSC\",\n    \"bankName\": \"ICICI bank\",\n    \"requestedAmount\": 1000000,\n    \"intrest\": 14,\n    \"loanTenure\": 10,\n    \"invoice\": \"doc-1678828880007-578095983.jpg\",\n    \"purpose\": \"some purpose\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/84b31e7e-2350-4ec1-9427-aebeb795e682/loan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"84b31e7e-2350-4ec1-9427-aebeb795e682",
+								"loan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "apply for fpo loan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"loanWindowId\": \"LOANWINDOW01\",\n    \"loanId\": \"LOAN01\",\n    \"payeeName\": \"FIRST LAST NAME\",\n    \"accountNumber\": \"BANK account number\",\n    \"ifscNumber\": \"IFSC\",\n    \"bankName\": \"ICICI bank\",\n    \"requestedAmount\": 1000000,\n    \"intrest\": 14,\n    \"loanTenure\": 10,\n    \"invoice\": \"doc-1678828880007-578095983.jpg\",\n    \"purpose\": \"some purpose\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/fb97feba-f201-4606-b06a-86e427fb9fd4/loan",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"fb97feba-f201-4606-b06a-86e427fb9fd4",
+										"loan"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-WRdHljDQBuDy+kDLBADAQAg8IQo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:48:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"ba584af2ce523575c3005b248fad2f497766b1d3459a1de8d059f018fda5f446\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get fpo loan window",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow?windowType=fpo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							],
+							"query": [
+								{
+									"key": "windowType",
+									"value": "fpo"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get fpo loan window",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow?windowType=fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									],
+									"query": [
+										{
+											"key": "windowType",
+											"value": "fpo"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1578"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62a-JWlH13WvZUB7OjNr61R7tAgvfLo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:37:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"af73393b-90e8-440a-abdf-4f8b508b8dd7\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": \"25,00,000\",\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        },\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"fb97feba-f201-4606-b06a-86e427fb9fd4\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": 2500000,\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "after approval - get fpo loan window",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow?windowType=fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									],
+									"query": [
+										{
+											"key": "windowType",
+											"value": "fpo"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3504"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"db0-IY5CuVdgp08b9LBOF4oimaMnyGQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:44:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"approvalDate\": \"2023-03-19T17:13:22+05:30\",\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"af73393b-90e8-440a-abdf-4f8b508b8dd7\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"reason\": \"some reason\",\n            \"requestedAmount\": \"25,00,000\",\n            \"status\": \"rejected\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        },\n        {\n            \"approvalDate\": \"2023-03-19T17:11:14+05:30\",\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": 2500000,\n            \"grantedAmountUtilized\": 0,\n            \"id\": \"fb97feba-f201-4606-b06a-86e427fb9fd4\",\n            \"intrest\": 12,\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": 2500000,\n            \"status\": \"approved\",\n            \"totalRepayableAmount\": 2837925,\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 1,\n                    \"repaymentDate\": \"19-03-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 2,\n                    \"repaymentDate\": \"19-04-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 3,\n                    \"repaymentDate\": \"19-05-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 4,\n                    \"repaymentDate\": \"19-06-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 5,\n                    \"repaymentDate\": \"19-07-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 6,\n                    \"repaymentDate\": \"19-08-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 7,\n                    \"repaymentDate\": \"19-09-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 8,\n                    \"repaymentDate\": \"19-10-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 9,\n                    \"repaymentDate\": \"19-11-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 10,\n                    \"repaymentDate\": \"19-12-2023\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 11,\n                    \"repaymentDate\": \"19-01-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 12,\n                    \"repaymentDate\": \"19-02-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 13,\n                    \"repaymentDate\": \"19-03-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 14,\n                    \"repaymentDate\": \"19-04-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 15,\n                    \"repaymentDate\": \"19-05-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 16,\n                    \"repaymentDate\": \"19-06-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 17,\n                    \"repaymentDate\": \"19-07-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 18,\n                    \"repaymentDate\": \"19-08-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 19,\n                    \"repaymentDate\": \"19-09-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 20,\n                    \"repaymentDate\": \"19-10-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 21,\n                    \"repaymentDate\": \"19-11-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 22,\n                    \"repaymentDate\": \"19-12-2024\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 23,\n                    \"repaymentDate\": \"19-01-2025\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 24,\n                    \"repaymentDate\": \"19-02-2025\"\n                },\n                {\n                    \"balance\": 2837925,\n                    \"emi\": 113517,\n                    \"id\": 25,\n                    \"repaymentDate\": \"19-03-2025\"\n                }\n            ],\n            \"windowType\": \"fpo\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get farmer loan window",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow?windowType=farmer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							],
+							"query": [
+								{
+									"key": "windowType",
+									"value": "farmer"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get farmer loan window",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow?windowType=farmer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									],
+									"query": [
+										{
+											"key": "windowType",
+											"value": "farmer"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "797"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31d-fdR4ziH+iLHWn5KUQIpfxPaVTSY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:38:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"0eede2ac-8e89-4328-9bb0-274075e0c835\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": 2500000,\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": \"25\",\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"farmer\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "approve farmer loan in a loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fpoApprovalStatus\": \"approved\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/893ba9dc-3a51-40db-b9f1-bc04c359d8d4/loan/51c9fbf5-1364-427a-95f2-f23843ee1bae/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"893ba9dc-3a51-40db-b9f1-bc04c359d8d4",
+								"loan",
+								"51c9fbf5-1364-427a-95f2-f23843ee1bae",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "approve farmer loan in a loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fpoApprovalStatus\": \"approved\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan/e8b73ef6-7e25-4e73-8b67-f2583047d8a8/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"0eede2ac-8e89-4328-9bb0-274075e0c835",
+										"loan",
+										"e8b73ef6-7e25-4e73-8b67-f2583047d8a8",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-H3AdNJ/q+fCvNrMk0eKwJMvPD2g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:00:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"3b576c337717a37bd509a5f4a10b6da38c2bba1acadd722cb71824ceafdd1745\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reject farmer loan in a loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fpoApprovalStatus\": \"rejected\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan/1cbd0bb1-54c0-403e-aea0-54ecd5ed8a37/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"0eede2ac-8e89-4328-9bb0-274075e0c835",
+								"loan",
+								"1cbd0bb1-54c0-403e-aea0-54ecd5ed8a37",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reject farmer loan in a loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fpoApprovalStatus\": \"rejected\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan/1cbd0bb1-54c0-403e-aea0-54ecd5ed8a37/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"0eede2ac-8e89-4328-9bb0-274075e0c835",
+										"loan",
+										"1cbd0bb1-54c0-403e-aea0-54ecd5ed8a37",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-lHmaoVx8ZyO/z0kd+p9c51wndP4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:08:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"66f0c8cc3d708f30b03b678c89ddd61b31d06e216f1dd632cfb781538aceab4f\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get loan approved by samunnati",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow/loan?type=farmer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"loan"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "farmer"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get loan approved by samunnati",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow/loan?type=farmer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"loan"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "farmer"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1430"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"596-saBGj1fs41uqmYq2o74pbvjfmhE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:25:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"accountNumber\": \"BANK account number\",\n            \"approvalAt\": \"2023-03-19T17:53:52+05:30\",\n            \"bankName\": \"ICICI bank\",\n            \"createdAt\": \"2023-03-19T17:50:37+05:30\",\n            \"fpoApprovalStatus\": \"approved\",\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"grantedAmount\": 2500000,\n            \"id\": \"51c9fbf5-1364-427a-95f2-f23843ee1bae\",\n            \"ifscNumber\": \"IFSC\",\n            \"intrest\": 14,\n            \"invoice\": \"doc-1678828880007-578095983.jpg\",\n            \"loanFor\": \"farmer\",\n            \"loanId\": \"LOAN01\",\n            \"loanTenure\": 10,\n            \"loanWindowId\": \"LOANWINDOW01\",\n            \"payeeName\": \"FIRST LAST NAME\",\n            \"paymentProof\": \"doc-1678828880007-578095983.jpg\",\n            \"purpose\": \"some purpose\",\n            \"repaymentStructure\": [\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 1,\n                    \"repaymentDate\": \"19-03-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 2,\n                    \"repaymentDate\": \"19-04-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 3,\n                    \"repaymentDate\": \"19-05-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 4,\n                    \"repaymentDate\": \"19-06-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 5,\n                    \"repaymentDate\": \"19-07-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 6,\n                    \"repaymentDate\": \"19-08-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 7,\n                    \"repaymentDate\": \"19-09-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 8,\n                    \"repaymentDate\": \"19-10-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 9,\n                    \"repaymentDate\": \"19-11-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 10,\n                    \"repaymentDate\": \"19-12-2023\"\n                }\n            ],\n            \"requestedAmount\": 1000000,\n            \"status\": \"approved\",\n            \"totalRepayableAmount\": 2663210,\n            \"userId\": \"6416f070cc8c880e8a48a17f\",\n            \"windowId\": \"893ba9dc-3a51-40db-b9f1-bc04c359d8d4\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "create lac test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fpoName\": \"FPO 1\",\n    \"fpoContact\": \"9876543210\",\n    \"sampleId\": \"SAMPLE 01\",\n    \"dateOfApplication\": \"2023-03-01\",\n    \"category\": \"category 1\",\n    \"testName\": \"Test 01\",\n    \"amount\": \"1000\",\n    \"paymentRefNo\": \"zaqwert\",\n    \"paymentImg\": \"productImg-1678542861257-411179465.jpg\",\n    \"lacSampleImg\": \"productImg-1678542861257-411179465.jpg\",\n    \"remarks\": \"some remarks\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/nisa/lactest",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"lactest"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "request lac test",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"fpoName\": \"FPO 1\",\n    \"fpoContact\": \"9876543210\",\n    \"sampleId\": \"SAMPLE 01\",\n    \"dateOfApplication\": \"2023-03-01\",\n    \"category\": \"category 1\",\n    \"testName\": \"Test 01\",\n    \"amount\": \"1000\",\n    \"paymentRefNo\": \"zaqwert\",\n    \"paymentImag\": \"productImg-1678542861257-411179465.jpg\",\n    \"lacSampleImg\": \"productImg-1678542861257-411179465.jpg\",\n    \"remarks\": \"some remarks\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/lactest",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lactest"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-OMBZBzLQuA7l642qeldr8KISzTo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Mar 2023 18:13:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"f33869929dc756b7960beb7a53093496d781897694e2f1f3c3676e8022425731\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all lac sample test application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/nisa/lactest",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"lactest"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all lac sample test application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/nisa/lactest",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lactest"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"522-GgWaZ8z6M1152bDKbReuOxSmQxA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Mar 2023 18:16:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"amount\": \"1000\",\n            \"applicationStatus\": \"in-process\",\n            \"category\": \"category 1\",\n            \"certificate\": \"\",\n            \"createdAt\": \"2023-03-16T23:43:00+05:30\",\n            \"createdBy\": \"user2\",\n            \"dateOfApplication\": \"2023-03-01\",\n            \"fpoContact\": \"9876543210\",\n            \"fpoId\": \"FPO01\",\n            \"fpoName\": \"FPO 1\",\n            \"lacSampleImg\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentImag\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentRefNo\": \"zaqwert\",\n            \"referenceNo\": \"\",\n            \"remarks\": \"some remarks\",\n            \"sampleId\": \"SAMPLE 01\",\n            \"testName\": \"Test 01\"\n        },\n        {\n            \"color\": \"blue\",\n            \"docType\": \"car\",\n            \"make\": \"Toyota\",\n            \"model\": \"Prius\",\n            \"owner\": \"Tomoko\"\n        },\n        {\n            \"color\": \"red\",\n            \"docType\": \"car\",\n            \"make\": \"Ford\",\n            \"model\": \"Mustang\",\n            \"owner\": \"Brad\"\n        },\n        {\n            \"color\": \"green\",\n            \"docType\": \"car\",\n            \"make\": \"Hyundai\",\n            \"model\": \"Tucson\",\n            \"owner\": \"Jin Soo\"\n        },\n        {\n            \"color\": \"yellow\",\n            \"docType\": \"car\",\n            \"make\": \"Volkswagen\",\n            \"model\": \"Passat\",\n            \"owner\": \"Max\"\n        },\n        {\n            \"color\": \"black\",\n            \"docType\": \"car\",\n            \"make\": \"Tesla\",\n            \"model\": \"S\",\n            \"owner\": \"Adriana\"\n        },\n        {\n            \"color\": \"purple\",\n            \"docType\": \"car\",\n            \"make\": \"Peugeot\",\n            \"model\": \"205\",\n            \"owner\": \"Michel\"\n        },\n        {\n            \"color\": \"white\",\n            \"docType\": \"car\",\n            \"make\": \"Chery\",\n            \"model\": \"S22L\",\n            \"owner\": \"Aarav\"\n        },\n        {\n            \"color\": \"violet\",\n            \"docType\": \"car\",\n            \"make\": \"Fiat\",\n            \"model\": \"Punto\",\n            \"owner\": \"Pari\"\n        },\n        {\n            \"color\": \"indigo\",\n            \"docType\": \"car\",\n            \"make\": \"Tata\",\n            \"model\": \"Nano\",\n            \"owner\": \"Valeria\"\n        },\n        {\n            \"color\": \"brown\",\n            \"docType\": \"car\",\n            \"make\": \"Holden\",\n            \"model\": \"Barina\",\n            \"owner\": \"Shotaro\"\n        },\n        {\n            \"name\": \"BMW\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "completed - get all lac sample test application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/nisa/lactest",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lactest"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "595"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"253-5GJZsMVVSvSU3/R67OYUdspiua0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 10:52:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"amount\": \"1000\",\n            \"applicationStatus\": \"completed\",\n            \"category\": \"category 1\",\n            \"certificate\": \"doc-1678542861257-411179465.jpg\",\n            \"createdAt\": \"2023-03-19T16:20:00+05:30\",\n            \"createdBy\": \"6416e6f3eaba7e02bfeb9297\",\n            \"dateOfApplication\": \"2023-03-01\",\n            \"fpoContact\": \"9876543210\",\n            \"fpoId\": \"6416e6f3eaba7e02bfeb9297\",\n            \"fpoName\": \"FPO 1\",\n            \"id\": \"4fdf82fc-e5d3-4043-9e5a-f5b265b5e9ba\",\n            \"lacSampleImg\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentImag\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentRefNo\": \"zaqwert\",\n            \"referenceNo\": \"REF123\",\n            \"remarks\": \"some remarks\",\n            \"sampleId\": \"SAMPLE 01\",\n            \"testName\": \"Test 01\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "samunnati",
+			"item": [
+				{
+					"name": "get fpo loan window",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow?windowType=fpo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							],
+							"query": [
+								{
+									"key": "windowType",
+									"value": "fpo"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get fpo loan window",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow?windowType=fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									],
+									"query": [
+										{
+											"key": "windowType",
+											"value": "fpo"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1578"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62a-JWlH13WvZUB7OjNr61R7tAgvfLo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:40:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"af73393b-90e8-440a-abdf-4f8b508b8dd7\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": \"25,00,000\",\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        },\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"fb97feba-f201-4606-b06a-86e427fb9fd4\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": 2500000,\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get farmer loan window",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow?windowType=farmer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							],
+							"query": [
+								{
+									"key": "windowType",
+									"value": "farmer"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get farmer loan window",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow?windowType=farmer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									],
+									"query": [
+										{
+											"key": "windowType",
+											"value": "farmer"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "797"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31d-fdR4ziH+iLHWn5KUQIpfxPaVTSY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:40:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"0eede2ac-8e89-4328-9bb0-274075e0c835\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": 2500000,\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": \"25\",\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"farmer\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "approve loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"approved\",\n    \"grantedAmount\": 2500000,\n    \"intrest\": 12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/893ba9dc-3a51-40db-b9f1-bc04c359d8d4/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"893ba9dc-3a51-40db-b9f1-bc04c359d8d4",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "approve loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"approved\",\n    \"grantedAmount\": 2500000,\n    \"intrest\": 12\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/fb97feba-f201-4606-b06a-86e427fb9fd4/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"fb97feba-f201-4606-b06a-86e427fb9fd4",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-IOe0MXXdlIzLL3/UZ1sGlymhJDk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:41:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"b75bdab8d4ead4ad316921f59a0e7dced75a66f160d00bad5325eb802e70a859\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reject loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"rejected\",\n    \"reason\": \"some reason\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/af73393b-90e8-440a-abdf-4f8b508b8dd7/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"af73393b-90e8-440a-abdf-4f8b508b8dd7",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reject loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"rejected\",\n    \"reason\": \"some reason\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/af73393b-90e8-440a-abdf-4f8b508b8dd7/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"af73393b-90e8-440a-abdf-4f8b508b8dd7",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-xmBX2agY+7DN5mlbETJTQa03WnU\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:43:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"ee783d22e7b996634c4f0abbe14fe58f70ba9d52602f1734f89c06b575f2c8f8\"\n}"
+						}
+					]
+				},
+				{
+					"name": "approve fpo loan from loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"approved\",\n    \"grantedAmount\": 2500000,\n    \"paymentProof\": \"doc-1678828880007-578095983.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/fb97feba-f201-4606-b06a-86e427fb9fd4/loan/df2c975f-6193-424a-a41e-851d90c9e8ae/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"fb97feba-f201-4606-b06a-86e427fb9fd4",
+								"loan",
+								"df2c975f-6193-424a-a41e-851d90c9e8ae",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "approve fpo loan from loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"approved\",\n    \"grantedAmount\": 2500000,\n    \"paymentProof\": \"doc-1678828880007-578095983.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/fb97feba-f201-4606-b06a-86e427fb9fd4/loan/df2c975f-6193-424a-a41e-851d90c9e8ae/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"fb97feba-f201-4606-b06a-86e427fb9fd4",
+										"loan",
+										"df2c975f-6193-424a-a41e-851d90c9e8ae",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-lz1AYQ6/YaXpX+i3muNiPRKTZdY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:54:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"fc98a5219b295d51df50e887f0bd2395202139736c94ce0ec1e47ace53e4f3ae\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reject fpo loan from loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"rejected\",\n    \"reason\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/84b31e7e-2350-4ec1-9427-aebeb795e682/loan/60d63897-f141-471e-95dc-c1c620d27a10/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"84b31e7e-2350-4ec1-9427-aebeb795e682",
+								"loan",
+								"60d63897-f141-471e-95dc-c1c620d27a10",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reject fpo loan from loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"rejected\",\n    \"reason\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/84b31e7e-2350-4ec1-9427-aebeb795e682/loan/60d63897-f141-471e-95dc-c1c620d27a10/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"84b31e7e-2350-4ec1-9427-aebeb795e682",
+										"loan",
+										"60d63897-f141-471e-95dc-c1c620d27a10",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-ZNUSgfwX1N2UAtcqtQNlGTI+nFM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:16:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"5d0958ed23dfe7a8a0a17aa022721147a199aaab5ce4bcb42e1e6d6d115b9a72\"\n}"
+						}
+					]
+				},
+				{
+					"name": "approve farmer loan from loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"approved\",\n    \"grantedAmount\": 2500000,\n    \"paymentProof\": \"doc-1678828880007-578095983.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/893ba9dc-3a51-40db-b9f1-bc04c359d8d4/loan/51c9fbf5-1364-427a-95f2-f23843ee1bae/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"893ba9dc-3a51-40db-b9f1-bc04c359d8d4",
+								"loan",
+								"51c9fbf5-1364-427a-95f2-f23843ee1bae",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "approve farmer loan from loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"approved\",\n    \"grantedAmount\": 2500000,\n    \"paymentProof\": \"doc-1678828880007-578095983.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan/e8b73ef6-7e25-4e73-8b67-f2583047d8a8/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"0eede2ac-8e89-4328-9bb0-274075e0c835",
+										"loan",
+										"e8b73ef6-7e25-4e73-8b67-f2583047d8a8",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-QaPLyesWr5yxICTvlpAyh4gMiiI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:02:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"9a52f9bcd56d49458f18004a319a9ec9b1a3a2eab7f90d04f4180710f9ac26c4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "reject farmer loan from loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"rejected\",\n    \"reason\": \"samunnati rejection\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan/49721600-e422-4ad4-acc7-a32aee098068/approval",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"0eede2ac-8e89-4328-9bb0-274075e0c835",
+								"loan",
+								"49721600-e422-4ad4-acc7-a32aee098068",
+								"approval"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "reject farmer loan from loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"status\": \"rejected\",\n    \"reason\": \"samunnati rejection\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan/49721600-e422-4ad4-acc7-a32aee098068/approval",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"0eede2ac-8e89-4328-9bb0-274075e0c835",
+										"loan",
+										"49721600-e422-4ad4-acc7-a32aee098068",
+										"approval"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-yt7+44+duHBIyi+v4Y7eekEiZ14\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:11:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"537298fc6a85d9d6d2cbff016d5cce341fd0ad0d41e3bff9c717a70b80e4e323\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "farmer",
+			"item": [
+				{
+					"name": "get loan list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow/loan?type=farmer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"loan"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "farmer"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get loan list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow/loan?type=farmer",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"loan"
+									],
+									"query": [
+										{
+											"key": "type",
+											"value": "farmer"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1430"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"596-saBGj1fs41uqmYq2o74pbvjfmhE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 12:24:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"accountNumber\": \"BANK account number\",\n            \"approvalAt\": \"2023-03-19T17:53:52+05:30\",\n            \"bankName\": \"ICICI bank\",\n            \"createdAt\": \"2023-03-19T17:50:37+05:30\",\n            \"fpoApprovalStatus\": \"approved\",\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"grantedAmount\": 2500000,\n            \"id\": \"51c9fbf5-1364-427a-95f2-f23843ee1bae\",\n            \"ifscNumber\": \"IFSC\",\n            \"intrest\": 14,\n            \"invoice\": \"doc-1678828880007-578095983.jpg\",\n            \"loanFor\": \"farmer\",\n            \"loanId\": \"LOAN01\",\n            \"loanTenure\": 10,\n            \"loanWindowId\": \"LOANWINDOW01\",\n            \"payeeName\": \"FIRST LAST NAME\",\n            \"paymentProof\": \"doc-1678828880007-578095983.jpg\",\n            \"purpose\": \"some purpose\",\n            \"repaymentStructure\": [\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 1,\n                    \"repaymentDate\": \"19-03-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 2,\n                    \"repaymentDate\": \"19-04-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 3,\n                    \"repaymentDate\": \"19-05-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 4,\n                    \"repaymentDate\": \"19-06-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 5,\n                    \"repaymentDate\": \"19-07-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 6,\n                    \"repaymentDate\": \"19-08-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 7,\n                    \"repaymentDate\": \"19-09-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 8,\n                    \"repaymentDate\": \"19-10-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 9,\n                    \"repaymentDate\": \"19-11-2023\"\n                },\n                {\n                    \"balance\": 2663210,\n                    \"emi\": 266321,\n                    \"id\": 10,\n                    \"repaymentDate\": \"19-12-2023\"\n                }\n            ],\n            \"requestedAmount\": 1000000,\n            \"status\": \"approved\",\n            \"totalRepayableAmount\": 2663210,\n            \"userId\": \"6416f070cc8c880e8a48a17f\",\n            \"windowId\": \"893ba9dc-3a51-40db-b9f1-bc04c359d8d4\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "apply for farmer loan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"loanWindowId\": \"LOANWINDOW01\",\n    \"loanId\": \"LOAN01\",\n    \"payeeName\": \"FIRST LAST NAME\",\n    \"accountNumber\": \"BANK account number\",\n    \"ifscNumber\": \"IFSC\",\n    \"bankName\": \"ICICI bank\",\n    \"requestedAmount\": 1000000,\n    \"intrest\": 14,\n    \"loanTenure\": 10,\n    \"invoice\": \"doc-1678828880007-578095983.jpg\",\n    \"purpose\": \"some purpose\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/893ba9dc-3a51-40db-b9f1-bc04c359d8d4/loan",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"893ba9dc-3a51-40db-b9f1-bc04c359d8d4",
+								"loan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "apply for farmer loan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"loanWindowId\": \"LOANWINDOW01\",\n    \"loanId\": \"LOAN01\",\n    \"payeeName\": \"FIRST LAST NAME\",\n    \"accountNumber\": \"BANK account number\",\n    \"ifscNumber\": \"IFSC\",\n    \"bankName\": \"ICICI bank\",\n    \"requestedAmount\": 1000000,\n    \"intrest\": 14,\n    \"loanTenure\": 10,\n    \"invoice\": \"doc-1678828880007-578095983.jpg\",\n    \"purpose\": \"some purpose\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/loan",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										"0eede2ac-8e89-4328-9bb0-274075e0c835",
+										"loan"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-9QPcDdGVWn2y8cDp3pLMK3WD43s\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:58:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"55d371d5953cee596fdfa24d0528e6a985fc176057146d1eea37453948c32cf5\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "nisa",
+			"item": [
+				{
+					"name": "update the lac test application with certificate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"referenceNo\": \"REF123\",\n    \"certificate\": \"doc-1678542861257-411179465.jpg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/nisa/lactest/4fdf82fc-e5d3-4043-9e5a-f5b265b5e9ba",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"lactest",
+								"4fdf82fc-e5d3-4043-9e5a-f5b265b5e9ba"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update the lac test application with certificate",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"referenceNo\": \"REF123\",\n    \"certificate\": \"doc-1678542861257-411179465.jpg\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/nisa/lactest/4fdf82fc-e5d3-4043-9e5a-f5b265b5e9ba",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lactest",
+										"4fdf82fc-e5d3-4043-9e5a-f5b265b5e9ba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-dtJ5QK/GFZkz65/6sXEVL55LToo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 10:54:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"4e28d434386ab9e6df0a419d72ab923fae6fca7eb42b70cc5e4d1e312eafa9be\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get all lac sample test application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/nisa/lactest",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"nisa",
+								"lactest"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all lac sample test application",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/nisa/lactest",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"nisa",
+										"lactest"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"522-GgWaZ8z6M1152bDKbReuOxSmQxA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 16 Mar 2023 18:16:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"amount\": \"1000\",\n            \"applicationStatus\": \"in-process\",\n            \"category\": \"category 1\",\n            \"certificate\": \"\",\n            \"createdAt\": \"2023-03-16T23:43:00+05:30\",\n            \"createdBy\": \"user2\",\n            \"dateOfApplication\": \"2023-03-01\",\n            \"fpoContact\": \"9876543210\",\n            \"fpoId\": \"FPO01\",\n            \"fpoName\": \"FPO 1\",\n            \"lacSampleImg\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentImag\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentRefNo\": \"zaqwert\",\n            \"referenceNo\": \"\",\n            \"remarks\": \"some remarks\",\n            \"sampleId\": \"SAMPLE 01\",\n            \"testName\": \"Test 01\"\n        },\n        {\n            \"color\": \"blue\",\n            \"docType\": \"car\",\n            \"make\": \"Toyota\",\n            \"model\": \"Prius\",\n            \"owner\": \"Tomoko\"\n        },\n        {\n            \"color\": \"red\",\n            \"docType\": \"car\",\n            \"make\": \"Ford\",\n            \"model\": \"Mustang\",\n            \"owner\": \"Brad\"\n        },\n        {\n            \"color\": \"green\",\n            \"docType\": \"car\",\n            \"make\": \"Hyundai\",\n            \"model\": \"Tucson\",\n            \"owner\": \"Jin Soo\"\n        },\n        {\n            \"color\": \"yellow\",\n            \"docType\": \"car\",\n            \"make\": \"Volkswagen\",\n            \"model\": \"Passat\",\n            \"owner\": \"Max\"\n        },\n        {\n            \"color\": \"black\",\n            \"docType\": \"car\",\n            \"make\": \"Tesla\",\n            \"model\": \"S\",\n            \"owner\": \"Adriana\"\n        },\n        {\n            \"color\": \"purple\",\n            \"docType\": \"car\",\n            \"make\": \"Peugeot\",\n            \"model\": \"205\",\n            \"owner\": \"Michel\"\n        },\n        {\n            \"color\": \"white\",\n            \"docType\": \"car\",\n            \"make\": \"Chery\",\n            \"model\": \"S22L\",\n            \"owner\": \"Aarav\"\n        },\n        {\n            \"color\": \"violet\",\n            \"docType\": \"car\",\n            \"make\": \"Fiat\",\n            \"model\": \"Punto\",\n            \"owner\": \"Pari\"\n        },\n        {\n            \"color\": \"indigo\",\n            \"docType\": \"car\",\n            \"make\": \"Tata\",\n            \"model\": \"Nano\",\n            \"owner\": \"Valeria\"\n        },\n        {\n            \"color\": \"brown\",\n            \"docType\": \"car\",\n            \"make\": \"Holden\",\n            \"model\": \"Barina\",\n            \"owner\": \"Shotaro\"\n        },\n        {\n            \"name\": \"BMW\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"setting token\", function () {",
+							"    pm.response.to.have.status(200);",
+							"    let res = pm.response.json()",
+							"    let token = res.token",
+							"    pm.environment.set(\"token\", token)",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"userId\": \"user2\",\n    \"mspId\": \"Org1MSP\"\n}",
+					"raw": "{\n    \"userName\": \"fpo\",\n    \"password\": \"helloworld\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -1621,33 +4801,111 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}/user",
+					"raw": "{{host}}/login",
 					"host": [
 						"{{host}}"
 					],
 					"path": [
-						"user"
+						"login"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userName\": \"fpo1\",\n    \"password\": \"helloworld\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/login",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "436"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1b4-TUwIA1qdl/2xb7YcSz90/bXmjtg\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 18 Mar 2023 18:05:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"_id\": \"6415fb378f420968c47b52aa\",\n        \"mspId\": \"Org1MSP\",\n        \"type\": \"fpo\",\n        \"name\": \"Some FPO name\",\n        \"userName\": \"fpo1\",\n        \"createdAt\": \"2023-03-18T17:56:07.248Z\",\n        \"updatedAt\": \"2023-03-18T17:56:07.248Z\",\n        \"__v\": 0\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDE1ZmIzNzhmNDIwOTY4YzQ3YjUyYWEiLCJtc3BJZCI6Ik9yZzFNU1AiLCJmcG9JZCI6IjY0MTVmYjM3OGY0MjA5NjhjNDdiNTJhYSIsImlhdCI6MTY3OTE2MjcyNn0.eXFdu_KdkDlPwMbTFY5VfnCWRmBBmEW-9siH16oMWfA\"\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"name": "create fab car",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": {
-					"raw": "{{host}}/fabcar",
-					"host": [
-						"{{host}}"
-					],
-					"path": [
-						"fabcar"
-					]
-				}
-			},
-			"response": []
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
