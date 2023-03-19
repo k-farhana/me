@@ -3,6 +3,8 @@ const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
 const connectDB = require('./configs/database')
+const fs = require('fs')
+const { enrollUser } = require('./utils/networkUtils')
 
 connectDB()
 
@@ -15,6 +17,15 @@ app.use(morgan('dev'))
 
 app.use("/img", express.static('uploads'))
 app.use("/api", require('./routes'))
+
+// checking and creating admin.id
+if(!fs.existsSync('./wallet/org1/admin.id')) {
+    enrollUser('admin', 'Org1MSP')
+        .then(()=>{
+            console.log('Admin user created')
+        })
+}
+
 
 const port = process.env.PORT || 3000
 

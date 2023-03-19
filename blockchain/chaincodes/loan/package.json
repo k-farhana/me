@@ -1,0 +1,22 @@
+{
+    "name": "loan",
+    "version": "1.0.0",
+    "description": "loan contract implemented in JavaScript",
+    "main": "index.js",
+    "engines": {
+        "node": ">=12",
+        "npm": ">=6.9"
+    },
+    "scripts": {
+        "start": "fabric-chaincode-node start"
+    },
+    "engineStrict": true,
+    "author": "Vj",
+    "dependencies": {
+        "fabric-contract-api": "^2.0.0",
+        "fabric-shim": "^2.0.0",
+        "json-stringify-deterministic": "^1.0.8",
+        "moment": "^2.29.4",
+        "sort-keys-recursive": "^2.1.8"
+    }
+}
