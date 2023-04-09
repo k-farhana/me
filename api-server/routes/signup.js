@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const { USER_TYPE } = require('../configs/constants')
 const UserModel = require('../models/user-model')
 const { HandleResponseError, RequestInputError } = require('../utils/handleResponseError')
 const { enrollUser } = require('../utils/networkUtils')
@@ -21,7 +22,7 @@ router.post('/farmer', async (req, res) => {
 // create fpo user
 router.post('/fpo', async (req, res) => {
     try {
-        await createUser('fpo', MSP_ID, req.body)
+        await createUser(USER_TYPE.FPO, MSP_ID, req.body)
 
         res.status(201).json({ data: 'successfully created' })
     } catch (err) {
@@ -32,7 +33,7 @@ router.post('/fpo', async (req, res) => {
 // get fpo list for farmer signup
 router.get('/fpo', async (req, res) => {
     try{
-        let data = await UserModel.find({ type: 'fpo' }).select({ _id: 1, userName: 1, name: 1 })
+        let data = await UserModel.find({ type: USER_TYPE.FPO }).select({ _id: 1, userName: 1, name: 1 })
 
         res.status(200).json({ data })
     }catch(err) {
@@ -43,7 +44,7 @@ router.get('/fpo', async (req, res) => {
 // create nisa user
 router.post('/nisa', async (req, res) => {
     try {
-        await createUser('nisa', MSP_ID, req.body)
+        await createUser(USER_TYPE.NISA, MSP_ID, req.body)
 
         res.status(201).json({ data: 'successfully created' })
     } catch (err) {
@@ -54,7 +55,7 @@ router.post('/nisa', async (req, res) => {
 // create samunnati user
 router.post('/samunnati', async (req, res) => {
     try {
-        await createUser('samunnati', MSP_ID, req.body)
+        await createUser(USER_TYPE.LENDING_PARTNER, MSP_ID, req.body)
 
         res.status(201).json({ data: 'successfully created' })
     } catch (err) {
@@ -65,7 +66,7 @@ router.post('/samunnati', async (req, res) => {
 // create corporateclient user
 router.post('/corporateclient', async (req, res) => {
     try {
-        await createUser('corporateclient', MSP_ID, req.body)
+        await createUser(USER_TYPE.CORPORATE_CLIENT, MSP_ID, req.body)
 
         res.status(201).json({ data: 'successfully created' })
     } catch (err) {

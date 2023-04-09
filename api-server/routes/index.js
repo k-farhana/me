@@ -3,7 +3,7 @@
 const router = require('express').Router()
 const jwt = require('jsonwebtoken')
 
-const { CHAINCODE_NAME, JWT_SECRET } = require('../configs/constants');
+const { CHAINCODE_NAME, JWT_SECRET, USER_TYPES } = require('../configs/constants');
 const UserModel = require('../models/user-model');
 const auth = require('../utils/auth-middleware');
 const { UploadToDisk } = require('../utils/fileUpload');
@@ -58,6 +58,22 @@ router.post('/user', async (req, res) => {
 
         res.status(201).json({ data: "User created" })
     } catch (err) {
+        HandleResponseError(err, res)
+    }
+})
+
+// get user list for iit-dhanbad
+router.get('/user/:type', async (req, res) => {
+    try{
+        let { type } = req.params
+
+        if(!USER_TYPES.includes(type)) {
+            throw new RequestInputError({ message: 'Invalid user type' })
+        }
+        let data = await UserModel.find({ type }).select({ password: 0 })
+
+        res.status(200).json({ data })
+    }catch(err) {
         HandleResponseError(err, res)
     }
 })

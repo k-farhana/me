@@ -194,6 +194,39 @@ class Loan extends Contract {
         return await this.iterateAndFetch(iterator)
     }
 
+    // add repayment info for loan window by samunnati
+    async makeFpoLoanWindowRepayment(ctx, loanWindowId, objStr ) {
+        let { repaymentId, paymentDate, paidAmount } = JSON.parse(objStr)
+
+        const dataAsBytes = await ctx.stub.getState(loanWindowId);
+        if (!dataAsBytes || dataAsBytes.length === 0) {
+            throw new Error(`Loan window with id: ${loanWindowId} does not exist`);
+        }
+
+        let loanWindow = JSON.parse(dataAsBytes.toString())
+
+        let repaymentIndex = loanWindow.windowRepaymentStructure.findIndex(repaymentObj => repaymentObj.id == repaymentId)
+
+        if(repaymentIndex == -1) {
+            throw new Error(`Repayment structure with id : ${repaymentId} does not exist`)
+        }
+
+        let repaymentObj = loanWindow.windowRepaymentStructure[repaymentIndex]
+
+        if(repaymentObj.paymentDate != "" || repaymentObj.paidAmount > 0) {
+            throw new Error(`Payment for repayment id: ${repaymentId} already done`)
+        }
+
+        // updating values about payment
+        repaymentObj.paymentDate = paymentDate
+        repaymentObj.paidAmount = paidAmount
+
+        // updating the loan window
+        await ctx.stub.putState(loanWindowId, Buffer.from(stringify(sortKeysRecursive(loanWindow))))
+
+        return ctx.stub.getTxID()
+    }
+
     // helper function to create repayment structure
     calculateRepaymentStructure(principle, intrest, tenureInMonths) {
         let emiPerMonth = Math.round(this.calculateEMI(principle, intrest, tenureInMonths))
@@ -213,7 +246,9 @@ class Loan extends Contract {
                 id: i + 1,
                 repaymentDate: moment(d).format('DD-MM-YYYY'),
                 emi: emiPerMonth,
-                balance: totalPayable
+                balance: totalPayable,
+                paymentDate: "",
+                paidAmount: 0
             }
             repaymentStructure.push(obj)
 

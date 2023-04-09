@@ -44,3 +44,12 @@ exports.LOAN_WINDOW_TYPE = { FPO: 'fpo', FARMER: 'farmer' }
 exports.LOAN_WINDOW_TYPES = [this.LOAN_WINDOW_TYPE.FPO, this.LOAN_WINDOW_TYPE.FARMER]
 
 exports.JWT_SECRET = 'secret'
+
+exports.USER_TYPE = {
+	FPO: 'fpo',
+	LENDING_PARTNER: 'lendingpartner',
+	CORPORATE_CLIENT: 'corporateclient',
+	NISA: 'nisa'
+}
+
+exports.USER_TYPES = [this.USER_TYPE.FPO, this.USER_TYPE.CORPORATE_CLIENT, this.USER_TYPE.LENDING_PARTNER, this.USER_TYPE.NISA]

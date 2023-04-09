@@ -2131,6 +2131,306 @@
 							"body": "{\n    \"data\": {\n        \"docId\": \"doc-1678828880007-578095983.jpg\"\n    }\n}"
 						}
 					]
+				},
+				{
+					"name": "get fpo users list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/fpo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"fpo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get users list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"fpo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-S+OPzpQ3kuuA/ZBMvlfTxrp20iM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Apr 2023 09:58:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"643265332cebe0dbe6b6334b\",\n            \"mspId\": \"Org1MSP\",\n            \"type\": \"fpo\",\n            \"name\": \"Some FPO name\",\n            \"userName\": \"fpo\",\n            \"createdAt\": \"2023-04-09T07:11:47.611Z\",\n            \"updatedAt\": \"2023-04-09T07:11:47.611Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get lendingpartner users list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/lendingpartner",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"lendingpartner"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get users list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"fpo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-S+OPzpQ3kuuA/ZBMvlfTxrp20iM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Apr 2023 09:58:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"643265332cebe0dbe6b6334b\",\n            \"mspId\": \"Org1MSP\",\n            \"type\": \"fpo\",\n            \"name\": \"Some FPO name\",\n            \"userName\": \"fpo\",\n            \"createdAt\": \"2023-04-09T07:11:47.611Z\",\n            \"updatedAt\": \"2023-04-09T07:11:47.611Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get nisa users list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/corporateclient",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"corporateclient"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get users list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"fpo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-S+OPzpQ3kuuA/ZBMvlfTxrp20iM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Apr 2023 09:58:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"643265332cebe0dbe6b6334b\",\n            \"mspId\": \"Org1MSP\",\n            \"type\": \"fpo\",\n            \"name\": \"Some FPO name\",\n            \"userName\": \"fpo\",\n            \"createdAt\": \"2023-04-09T07:11:47.611Z\",\n            \"updatedAt\": \"2023-04-09T07:11:47.611Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "get corporateclient users list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/nisa",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"nisa"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get users list",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/user/fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"user",
+										"fpo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "202"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ca-S+OPzpQ3kuuA/ZBMvlfTxrp20iM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 09 Apr 2023 09:58:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"643265332cebe0dbe6b6334b\",\n            \"mspId\": \"Org1MSP\",\n            \"type\": \"fpo\",\n            \"name\": \"Some FPO name\",\n            \"userName\": \"fpo\",\n            \"createdAt\": \"2023-04-09T07:11:47.611Z\",\n            \"updatedAt\": \"2023-04-09T07:11:47.611Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
 				}
 			]
 		},
@@ -2144,7 +2444,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"bidId\": \"BID01\",\n    \"lacStrainType\": \"Kusmi\",\n    \"sourceTree\": \"Kusum\",\n    \"origin\": \"MP\",\n    \"seedLacContent\": \"some content\",\n    \"freshResinContent\": \"some content\",\n    \"quantity\": \"500\",\n    \"supplyDate\": \"2023-03-23\",\n    \"bidEndDate\": \"2023-03-20\",\n    \"reportsRequired\": [\"Chowri\"],\n    \"remarks\": \"some remarks\"\n}",
+							"raw": "{\n    \"bidId\": \"BID01\",\n    \"lacStrainType\": \"Kusmi\",\n    \"sourceTree\": \"Kusum\",\n    \"origin\": \"MP\",\n    \"seedLacContent\": \"some content\",\n    \"freshResinContent\": \"some content\",\n    \"quantity\": \"500\",\n    \"supplyDate\": \"2023-03-23\",\n    \"bidEndDate\": \"2023-03-20\",\n    \"reportsRequired\": [\"Chowri\"],\n    \"remarks\": \"some remarks\" \n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3736,6 +4036,95 @@
 					]
 				},
 				{
+					"name": "get fpo loans by fpo id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/loanwindow?windowType=fpo&fpoId=6416f070cc8c880e8a48a17f",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow"
+							],
+							"query": [
+								{
+									"key": "windowType",
+									"value": "fpo"
+								},
+								{
+									"key": "fpoId",
+									"value": "6416f070cc8c880e8a48a17f"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get fpo loan window",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/loanwindow?windowType=fpo",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow"
+									],
+									"query": [
+										{
+											"key": "windowType",
+											"value": "fpo"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1578"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62a-JWlH13WvZUB7OjNr61R7tAgvfLo\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 19 Mar 2023 11:40:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"af73393b-90e8-440a-abdf-4f8b508b8dd7\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": \"25,00,000\",\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        },\n        {\n            \"consumedWindowLoanAmount\": 0,\n            \"contactNo\": \"9876543210\",\n            \"dateOfApplication\": \"2023-03-18\",\n            \"financialDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"fpoId\": \"6416f070cc8c880e8a48a17f\",\n            \"fpoName\": \"FPO NAME\",\n            \"fpoProfile\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"grantedAmount\": -1,\n            \"id\": \"fb97feba-f201-4606-b06a-86e427fb9fd4\",\n            \"kycAuthorizedSignatories\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"kycDocuments\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"moa\"\n                }\n            ],\n            \"licenses\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"loans\": [],\n            \"otherDetails\": [\n                {\n                    \"doc\": \"doc-1678828880007-578095983.jpg\",\n                    \"name\": \"\"\n                }\n            ],\n            \"requestedAmount\": 2500000,\n            \"status\": \"pending\",\n            \"windowId\": \"WINDOWID01\",\n            \"windowPeriod\": 25,\n            \"windowRepaymentStructure\": [],\n            \"windowType\": \"fpo\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
 					"name": "get farmer loan window",
 					"request": {
 						"method": "GET",
@@ -4401,6 +4790,78 @@
 									"value": "timeout=5"
 								}
 							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"537298fc6a85d9d6d2cbff016d5cce341fd0ad0d41e3bff9c717a70b80e4e323\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update repayment for fpo loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentDate\": \"2023-04-09\",\n    \"paidAmount\": 25000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/repayment/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"0eede2ac-8e89-4328-9bb0-274075e0c835",
+								"repayment",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update repayment for fpo loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"paymentDate\": \"2023-04-09\",\n    \"paidAmount\": 25000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/:windowId/repayment/:repaymentId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										":windowId",
+										"repayment",
+										":repaymentId"
+									],
+									"variable": [
+										{
+											"key": "windowId",
+											"value": ""
+										},
+										{
+											"key": "repaymentId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
 							"cookie": [],
 							"body": "{\n    \"data\": \"537298fc6a85d9d6d2cbff016d5cce341fd0ad0d41e3bff9c717a70b80e4e323\"\n}"
 						}

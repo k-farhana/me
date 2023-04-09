@@ -43,6 +43,11 @@ router.get('/', getNetworkInfo, async (req, res) => {
         let { fpoId = "", userId, network } = req.session
         let { windowType } = req.query
 
+        // when samunnati request for loan info for a paticular fpo
+        if(fpoId == "") {
+            fpoId = req.query.fpoId
+        }
+
         if (!LOAN_WINDOW_TYPES.includes(windowType)) {
             throw new RequestInputError({ code: 422, message: "Invalid windowType, possible values 'fpo', 'farmer'." })
         }
@@ -180,6 +185,39 @@ router.get('/loan', getNetworkInfo, async (req, res) => {
     }
 })
 
+// update repayment for fpo loan window
+router.put('/:windowId/repayment/:repaymentId', getNetworkInfo, async (req, res) => {
+    try {
+        let { fpoId, userId, network } = req.session
+        let { windowId, repaymentId } = req.params
+        let { paymentDate, paidAmount } = req.body
 
+        if (windowId == "") {
+            throw new RequestInputError({ message: "Loan window id is required" })
+        }
+
+        if (repaymentId == "") {
+            throw new RequestInputError({ message: "Repayment id is required" })
+        }
+
+        if(!paymentDate || !paymentDate == "") {
+            throw new RequestInputError({ message: "Payment date is required" })
+        }
+
+        if(!paidAmount || paidAmount <= 0) {
+            throw new RequestInputError({ message: "Paid amount is required and should greater than 0" })
+        }
+
+        const contract = network.getContract(CHAINCODE_NAME.LOAN)
+
+        let paymentObj = { repaymentId, paymentDate, paidAmount }
+        const result = await contract.submitTransaction('makeFpoLoanWindowRepayment', windowId, JSON.stringify(paymentObj))
+
+        res.status(201).json({ data: result.toString() })
+
+    } catch (err) {
+        HandleResponseError(err, res)
+    }
+})
 
 module.exports = router
