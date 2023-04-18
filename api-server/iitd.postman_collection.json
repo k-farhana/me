@@ -1959,7 +1959,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\n    \"name\": \"Some farmer name\",\n    \"userName\": \"farmer\",\n    \"password\": \"farmer\"\n}",
+											"raw": "{\n    \"name\": \"Some farmer name\",\n    \"userName\": \"farmer\",\n    \"password\": \"farmer\",\n    \"fpoId\": \"FPOID\"\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -2628,6 +2628,66 @@
 					]
 				},
 				{
+					"name": "request to submit test report for the bid",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"you can send\": \"anything you want\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid/f5561c7a-76a2-41a3-9bc0-e3367a25420e/testreport",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+								"bid",
+								"f5561c7a-76a2-41a3-9bc0-e3367a25420e",
+								"testreport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "place order for a bid",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"you can send\": \"anything you want\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid/f5561c7a-76a2-41a3-9bc0-e3367a25420e/order",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+								"bid",
+								"f5561c7a-76a2-41a3-9bc0-e3367a25420e",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "get auction list",
 					"request": {
 						"method": "GET",
@@ -2927,6 +2987,66 @@
 							"body": "{\n    \"data\": \"2ba45cf4e28bd88020477278c890149d325ab28dd63428ef692055970a2f0c48\"\n}"
 						}
 					]
+				},
+				{
+					"name": "upload test reports for a bid",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"requiredTestReports\": [\"doc-1678828880007-578095983.jpg\", \"doc-1678828880007-578095983.jpg\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid/f5561c7a-76a2-41a3-9bc0-e3367a25420e/testreport",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+								"bid",
+								"f5561c7a-76a2-41a3-9bc0-e3367a25420e",
+								"testreport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload invoice for a bid",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"invoice\": [\"doc-1678828880007-578095983.jpg\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/auction/c1ab8ccf-074f-478e-9e6b-81cc9305de4d/bid/f5561c7a-76a2-41a3-9bc0-e3367a25420e/invoice",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"auction",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+								"bid",
+								"f5561c7a-76a2-41a3-9bc0-e3367a25420e",
+								"invoice"
+							]
+						}
+					},
+					"response": []
 				},
 				{
 					"name": "create fpo loan window",
@@ -3944,6 +4064,96 @@
 							"body": "{\n    \"data\": [\n        {\n            \"amount\": \"1000\",\n            \"applicationStatus\": \"completed\",\n            \"category\": \"category 1\",\n            \"certificate\": \"doc-1678542861257-411179465.jpg\",\n            \"createdAt\": \"2023-03-19T16:20:00+05:30\",\n            \"createdBy\": \"6416e6f3eaba7e02bfeb9297\",\n            \"dateOfApplication\": \"2023-03-01\",\n            \"fpoContact\": \"9876543210\",\n            \"fpoId\": \"6416e6f3eaba7e02bfeb9297\",\n            \"fpoName\": \"FPO 1\",\n            \"id\": \"4fdf82fc-e5d3-4043-9e5a-f5b265b5e9ba\",\n            \"lacSampleImg\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentImag\": \"productImg-1678542861257-411179465.jpg\",\n            \"paymentRefNo\": \"zaqwert\",\n            \"referenceNo\": \"REF123\",\n            \"remarks\": \"some remarks\",\n            \"sampleId\": \"SAMPLE 01\",\n            \"testName\": \"Test 01\"\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "get farmer list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/fpo/farmer",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"farmer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get farmer application",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/user/c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept or reject farmer membership",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"Accepted\",\n    \"you can send\": \"anything you want\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/farmer/c1ab8ccf-074f-478e-9e6b-81cc9305de4d",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"farmer",
+								"c1ab8ccf-074f-478e-9e6b-81cc9305de4d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set intrest rate for farmer loan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"intrestRate\": 12,\n    \"you can send\": \"anything you want\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/fpo/intrest-rate",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"fpo",
+								"intrest-rate"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
