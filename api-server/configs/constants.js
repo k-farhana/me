@@ -17,6 +17,13 @@ exports.AUCTION_STATUS = {
 	COMPLETED: 'completed'
 }
 
+exports.BID_STATUS = {
+	REQUESTED_TEST_REPORT: 'requested-test-report',
+	TEST_REPORT_ADDED: 'test-report-added',
+	INVOICE_ADDED: 'invoice-added',
+	ORDERED: 'ordered'
+}
+
 exports.CHAINCODE_NAME = {
 	FABCAR: 'fabcar',
 	LAC_SAMPLE_TEST_APPLICATION: 'lacsampletestapplication',

@@ -62,6 +62,17 @@ router.post('/user', async (req, res) => {
     }
 })
 
+router.get('/user/:userId', async (req, res) => {
+    try{
+        let { userId } = req.params
+
+        let data = await UserModel.find({ _id: userId }).select({ password: 0 })
+        res.status(200).json({ data })
+    }catch(err){
+        HandleResponseError(err, res)
+    }
+})
+
 // get user list for iit-dhanbad
 router.get('/user/:type', async (req, res) => {
     try{

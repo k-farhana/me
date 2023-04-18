@@ -31,6 +31,86 @@ class Auction extends Contract {
         return ctx.stub.getTxID()
     }
 
+    // request test report for bid by corporate client
+    async requestTestReportForBid(ctx, auctionId, bidId, objStr) {
+        let auctionBuffer = await this.getById(ctx, auctionId);
+        let auction = JSON.parse(auctionBuffer.toString());
+
+        let bid = auction.bids.find(bid => bid.id == bidId);
+
+        if(!bid) {
+            throw new Error(`Bid with id:${bid} does not exist for auction with id: ${auctionId}`);
+        }
+
+        // request test report details to bid
+        bid = { ...bid, ...JSON.parse(objStr) }
+
+        bid.status = 'requested-test-report'
+
+        await ctx.stub.putState(auctionId, Buffer.from(stringify(sortKeysRecursive(auction))))
+        return ctx.stub.getTxID()
+    }
+
+    // add test report for bid by fpo
+    async addTestReportForBid(ctx, auctionId, bidId, objStr) {
+        let auctionBuffer = await this.getById(ctx, auctionId);
+        let auction = JSON.parse(auctionBuffer.toString());
+
+        let bid = auction.bids.find(bid => bid.id == bidId);
+
+        if(!bid) {
+            throw new Error(`Bid with id:${bid} does not exist for auction with id: ${auctionId}`);
+        }
+
+        // add test report details to bid
+        bid = { ...bid, ...JSON.parse(objStr) }
+
+        bid.status = 'test-report-added'
+
+        await ctx.stub.putState(auctionId, Buffer.from(stringify(sortKeysRecursive(auction))))
+        return ctx.stub.getTxID()
+    }
+
+    // add invoice for bid by fpo
+    async addInvoiceForBid(ctx, auctionId, bidId, objStr) {
+        let auctionBuffer = await this.getById(ctx, auctionId);
+        let auction = JSON.parse(auctionBuffer.toString());
+
+        let bid = auction.bids.find(bid => bid.id == bidId);
+
+        if(!bid) {
+            throw new Error(`Bid with id:${bid} does not exist for auction with id: ${auctionId}`);
+        }
+
+        // add invoice details to bid
+        bid = { ...bid, ...JSON.parse(objStr) }
+
+        bid.status = 'invoice-added'
+
+        await ctx.stub.putState(auctionId, Buffer.from(stringify(sortKeysRecursive(auction))))
+        return ctx.stub.getTxID()
+    }
+
+    // place order to an fpo bid by corporate client
+    async placeOrderToBid(ctx, auctionId, bidId, objStr) {
+        let auctionBuffer = await this.getById(ctx, auctionId);
+        let auction = JSON.parse(auctionBuffer.toString());
+
+        let bid = auction.bids.find(bid => bid.id == bidId);
+
+        if(!bid) {
+            throw new Error(`Bid with id:${bid} does not exist for auction with id: ${auctionId}`);
+        }
+
+        // request test report details to bid
+        bid = { ...bid, ...JSON.parse(objStr) }
+
+        bid.status = 'ordered'
+
+        await ctx.stub.putState(auctionId, Buffer.from(stringify(sortKeysRecursive(auction))))
+        return ctx.stub.getTxID()
+    }
+
     // make payment for a bid by corporate client
     async makePaymentForBid(ctx, auctionId, bidId, objStr) {
         let auctionBuffer = await this.getById(ctx, auctionId);
