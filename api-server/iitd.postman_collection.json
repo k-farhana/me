@@ -2230,13 +2230,13 @@
 								"method": "GET",
 								"header": [],
 								"url": {
-									"raw": "{{host}}/user/fpo",
+									"raw": "{{host}}/user/lendingpartner",
 									"host": [
 										"{{host}}"
 									],
 									"path": [
 										"user",
-										"fpo"
+										"lendingpartner"
 									]
 								}
 							},
@@ -2431,6 +2431,127 @@
 							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"643265332cebe0dbe6b6334b\",\n            \"mspId\": \"Org1MSP\",\n            \"type\": \"fpo\",\n            \"name\": \"Some FPO name\",\n            \"userName\": \"fpo\",\n            \"createdAt\": \"2023-04-09T07:11:47.611Z\",\n            \"updatedAt\": \"2023-04-09T07:11:47.611Z\",\n            \"__v\": 0\n        }\n    ]\n}"
 						}
 					]
+				},
+				{
+					"name": "create support request for all users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": \"Some query\",\n    \"Can have\": \"any data in body\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/support/fpo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"support",
+								"fpo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get support request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"query\": \"Some query\",\n    \"Can have\": \"any data in body\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/support/fpo",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"support",
+								"fpo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create farmer produce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"can have\": \"any content in body\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/farmer/produce",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"farmer",
+								"produce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get produce of a farmer",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/farmer/:farmerId/produce",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"farmer",
+								":farmerId",
+								"produce"
+							],
+							"variable": [
+								{
+									"key": "farmerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -4154,6 +4275,78 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "update repayment for fpo loan window",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"paymentDate\": \"2023-04-09\",\n    \"paidAmount\": 25000\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/loanwindow/0eede2ac-8e89-4328-9bb0-274075e0c835/repayment/2",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"loanwindow",
+								"0eede2ac-8e89-4328-9bb0-274075e0c835",
+								"repayment",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update repayment for fpo loan window",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"paymentDate\": \"2023-04-09\",\n    \"paidAmount\": 25000\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/loanwindow/:windowId/repayment/:repaymentId",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"loanwindow",
+										":windowId",
+										"repayment",
+										":repaymentId"
+									],
+									"variable": [
+										{
+											"key": "windowId",
+											"value": ""
+										},
+										{
+											"key": "repaymentId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": null,
+							"cookie": [],
+							"body": "{\n    \"data\": \"537298fc6a85d9d6d2cbff016d5cce341fd0ad0d41e3bff9c717a70b80e4e323\"\n}"
+						}
+					]
 				}
 			]
 		},

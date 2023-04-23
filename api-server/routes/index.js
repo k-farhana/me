@@ -12,8 +12,10 @@ const { getNetworkInfo, enrollUser } = require('../utils/networkUtils');
 
 router.use('/nisa', auth, require('./nisa'))
 router.use('/fpo', auth, require('./fpo-products'))
+router.use('/farmer', auth, require('./farmer'))
 router.use('/auction', auth, require('./auction'))
 router.use('/loanwindow', auth, require('./loan'))
+router.use('/support', auth, require('./support'))
 router.use('/signup', require('./signup'))
 
 router.post('/document', UploadToDisk.single('doc'), async (req, res) => {
