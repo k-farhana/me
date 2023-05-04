@@ -96,7 +96,7 @@ router.get('/farmer', async (req, res) => {
         let { fpoId } = req.session
 
         let data = await UserModel.find({ fpoId, isDeleted: false }).select({ password: 0 })
-
+        console.log("data:",data)
         res.status(201).json({ data })
     } catch (err) {
         HandleResponseError(err, res)
