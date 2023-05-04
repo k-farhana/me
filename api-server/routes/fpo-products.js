@@ -3,6 +3,8 @@ const FpoProductModel = require('../models/fpo-product-model')
 const UserModel = require('../models/user-model')
 const { UploadToDisk } = require('../utils/fileUpload')
 const { HandleResponseError } = require('../utils/handleResponseError')
+const { USER_TYPE } = require('../configs/constants')
+
 
 const router = require('express').Router()
 
