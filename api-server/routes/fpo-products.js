@@ -99,7 +99,7 @@ router.get('/farmer', async (req, res) => {
         // console.log(fpoId);
         // console.log("type: USER_TYPE.FPO");
         
-        let data = await UserModel.find({ type: USER_TYPE.FARMER, fpoId:  fpoId }).select({ _id: 1, userName: 1, name: 1 })
+        let data = await UserModel.find({   fpoId, type: 'farmer' }).select({ password: 0 })
 
         console.log("data:",data)
 
