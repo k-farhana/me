@@ -96,8 +96,6 @@ router.put('/lac/:id', UploadToDisk.single('productImg'), async (req, res) => {
 router.get('/farmer', async (req, res) => {
     try {
         let { fpoId } = req.session
-        // console.log(fpoId);
-        // console.log("type: USER_TYPE.FPO");
         
         let data = await UserModel.find({   fpoId, type: 'farmer' }).select({ password: 0 })
 
