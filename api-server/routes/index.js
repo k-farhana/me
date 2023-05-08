@@ -76,7 +76,7 @@ router.get('/user/id/:userId', async (req, res) => {
 })
 
 // get user list for iit-dhanbad
-router.get('/user/:type', async (req, res) => {
+router.get('/user/list/:type', async (req, res) => {
     try{
         let { type } = req.params
         console.log("type here" , type);
