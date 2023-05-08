@@ -42,7 +42,7 @@ router.get('/', getNetworkInfo, async (req, res) => {
     try {
 //         let { fpoId = "", userId, network } = req.session
         let { fpoId , userId, network } = req.session
-
+        console.log("fpo loan window")
         console.log(fpoId)
         let { windowType } = req.query
 
