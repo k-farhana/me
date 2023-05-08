@@ -64,7 +64,7 @@ router.post('/user', async (req, res) => {
     }
 })
 
-router.get('/user/:userId', async (req, res) => {
+router.get('/user/id/:userId', async (req, res) => {
     try{
         let { userId } = req.params
 
