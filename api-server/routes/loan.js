@@ -40,7 +40,10 @@ router.post('/', getNetworkInfo, async (req, res) => {
 // get loan window list for Samunnati / FPO 
 router.get('/', getNetworkInfo, async (req, res) => {
     try {
-        let { fpoId = "", userId, network } = req.session
+//         let { fpoId = "", userId, network } = req.session
+        let { fpoId , userId, network } = req.session
+
+        console.log(fpoId)
         let { windowType } = req.query
 
         // when samunnati request for loan info for a paticular fpo
