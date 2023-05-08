@@ -79,6 +79,7 @@ router.get('/user/id/:userId', async (req, res) => {
 router.get('/user/:type', async (req, res) => {
     try{
         let { type } = req.params
+        console.log("type here" , type);
 
         if(!USER_TYPES.includes(type)) {
             throw new RequestInputError({ message: 'Invalid user type' })
