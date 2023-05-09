@@ -19,12 +19,12 @@ class Loan extends Contract {
        
         let richQuery = { "selector": { "windowType": { "$eq": windowType } } }
         
-        console.log("From Blokchain the First Query results are :", this.iterateAndFetch(JSON.stringify(richQuery)))
+      
 
-        // to retrieve only for fpoId
-//         if (fpoId != "") {
-//             richQuery.selector["fpoId"] = fpoId
-//         }
+        to retrieve only for fpoId
+        if (fpoId != "") {
+            richQuery.selector["fpoId"] = fpoId
+        }
 
         let iterator = await ctx.stub.getQueryResult(JSON.stringify(richQuery))
 
