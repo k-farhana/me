@@ -43,7 +43,7 @@ router.get('/', getNetworkInfo, async (req, res) => {
 //         let { fpoId = "", userId, network } = req.session
         let { fpoId , userId, network } = req.session
         console.log("fpo loan window")
-        console.log(fpoId)
+        console.log(fpoId, "is the fpoID")
         let { windowType } = req.query
 
         // when samunnati request for loan info for a paticular fpo
@@ -58,6 +58,8 @@ router.get('/', getNetworkInfo, async (req, res) => {
         const contract = network.getContract(CHAINCODE_NAME.LOAN)
 
         const result = await contract.evaluateTransaction('getLoanWindow', fpoId, windowType)
+        
+        console.log(result, "is the result");
 
         res.status(201).json({ data: JSON.parse(result.toString()) })
 
