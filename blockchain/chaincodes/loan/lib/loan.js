@@ -21,7 +21,7 @@ class Loan extends Contract {
         
       
 
-        to retrieve only for fpoId
+    
         if (fpoId != "") {
             richQuery.selector["fpoId"] = fpoId
         }
