@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-version: '3.7'
+version: '3.2'
 
 volumes:
   orderer.example.com:
@@ -12,7 +12,7 @@ volumes:
 
 networks:
   test:
-    name: fabric_test
+    # name: fabric_test
 
 services:
 
