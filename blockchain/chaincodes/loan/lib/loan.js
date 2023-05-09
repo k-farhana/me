@@ -16,9 +16,10 @@ class Loan extends Contract {
 
     // retrieve load window
     async getLoanWindow(ctx, fpoId, windowType) {
+        console.log(windowType);
         let richQuery = { "selector": { "windowType": { "$eq": windowType } } }
         
-        console.log("From Blokchain the First Query results are :", JSON.stringify(richQuery))
+        console.log("From Blokchain the First Query results are :", this.iterateAndFetch(JSON.stringify(richQuery)))
 
         // to retrieve only for fpoId
         if (fpoId != "") {
